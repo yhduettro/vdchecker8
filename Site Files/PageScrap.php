@@ -12,7 +12,7 @@ function connectToDB()
 //	$password = "test"; // MySQLサーバの管理者パスワード
 //	$server = "localhost";  // MySQLサーバを実行しているサーバアドレス
     $userName = "lans_15097304"; // MySQLサーバの管理者名
-    $password = "8088909"; // MySQLサーバの管理者パスワード
+    $password = "8~9"; // MySQLサーバの管理者パスワード
     $server = "http://sql106.lancershost.com";  // MySQLサーバを実行しているサーバアドレス
 	$db = mysql_connect($server, $userName, $password);
 	
