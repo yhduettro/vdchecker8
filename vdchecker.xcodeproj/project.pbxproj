@@ -6,7 +6,30 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F12C33181974BF6700C48B75 /* vdcheckphp */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F12C331B1974BF6700C48B75 /* Build configuration list for PBXAggregateTarget "vdcheckphp" */;
+			buildPhases = (
+				F12C331C1974C44C00C48B75 /* CopyFiles */,
+			);
+			dependencies = (
+			);
+			name = vdcheckphp;
+			productName = vdcheckphp;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1985F921972235600277585 /* PageScrap.php */; };
+		F12C33281974E06900C48B75 /* doDelete.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
+		F12C33291974E06900C48B75 /* doGetDetail.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
+		F12C332A1974E06900C48B75 /* doInsert.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33221974E06900C48B75 /* doInsert.php */; };
+		F12C332B1974E06900C48B75 /* doList.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33231974E06900C48B75 /* doList.php */; };
+		F12C332C1974E06900C48B75 /* doUpdate.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33241974E06900C48B75 /* doUpdate.php */; };
+		F12C332D1974E06900C48B75 /* index.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33251974E06900C48B75 /* index.php */; };
+		F12C332E1974E06900C48B75 /* RegisterTestData.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33261974E06900C48B75 /* RegisterTestData.php */; };
+		F12C332F1974E06900C48B75 /* ShowInfo.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33271974E06900C48B75 /* ShowInfo.php */; };
 		F138A0B119734F000022F7DE /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A0B019734F000022F7DE /* top.png */; };
 		F138A0B51973519E0022F7DE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F138A0B41973519E0022F7DE /* PageContentViewController.m */; };
 		F138A0BA1973534A0022F7DE /* top_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A0B61973534A0022F7DE /* top_1.png */; };
@@ -110,6 +133,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F12C331E1974C96200C48B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1985F4E1972231400277585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F12C33181974BF6700C48B75;
+			remoteInfo = vdcheckphp;
+		};
 		F1985F7F1972231500277585 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1985F4E1972231400277585 /* Project object */;
@@ -119,7 +149,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F12C331C1974C44C00C48B75 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /Users/JGO/Documents/Lancershost/quiz;
+			dstSubfolderSpec = 0;
+			files = (
+				F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F12C33201974E06900C48B75 /* doDelete.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doDelete.php; path = "Site Files/doDelete.php"; sourceTree = SOURCE_ROOT; };
+		F12C33211974E06900C48B75 /* doGetDetail.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doGetDetail.php; path = "Site Files/doGetDetail.php"; sourceTree = SOURCE_ROOT; };
+		F12C33221974E06900C48B75 /* doInsert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doInsert.php; path = "Site Files/doInsert.php"; sourceTree = SOURCE_ROOT; };
+		F12C33231974E06900C48B75 /* doList.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doList.php; path = "Site Files/doList.php"; sourceTree = SOURCE_ROOT; };
+		F12C33241974E06900C48B75 /* doUpdate.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doUpdate.php; path = "Site Files/doUpdate.php"; sourceTree = SOURCE_ROOT; };
+		F12C33251974E06900C48B75 /* index.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = index.php; path = "Site Files/index.php"; sourceTree = SOURCE_ROOT; };
+		F12C33261974E06900C48B75 /* RegisterTestData.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = RegisterTestData.php; path = "Site Files/RegisterTestData.php"; sourceTree = SOURCE_ROOT; };
+		F12C33271974E06900C48B75 /* ShowInfo.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = ShowInfo.php; path = "Site Files/ShowInfo.php"; sourceTree = SOURCE_ROOT; };
 		F138A0B019734F000022F7DE /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = top.png; path = Images/top.png; sourceTree = "<group>"; };
 		F138A0B31973519E0022F7DE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = ViewControllers/PageContentViewController.h; sourceTree = "<group>"; };
 		F138A0B41973519E0022F7DE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageContentViewController.m; path = ViewControllers/PageContentViewController.m; sourceTree = "<group>"; };
@@ -504,6 +555,14 @@
 		F1985F911972234300277585 /* Site Files */ = {
 			isa = PBXGroup;
 			children = (
+				F12C33201974E06900C48B75 /* doDelete.php */,
+				F12C33211974E06900C48B75 /* doGetDetail.php */,
+				F12C33221974E06900C48B75 /* doInsert.php */,
+				F12C33231974E06900C48B75 /* doList.php */,
+				F12C33241974E06900C48B75 /* doUpdate.php */,
+				F12C33251974E06900C48B75 /* index.php */,
+				F12C33261974E06900C48B75 /* RegisterTestData.php */,
+				F12C33271974E06900C48B75 /* ShowInfo.php */,
 				F1985F921972235600277585 /* PageScrap.php */,
 				F1985F931972235600277585 /* RemoteInfo */,
 			);
@@ -524,6 +583,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F12C331F1974C96200C48B75 /* PBXTargetDependency */,
 			);
 			name = vdchecker;
 			productName = vdchecker;
@@ -558,6 +618,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = jgoplay;
 				TargetAttributes = {
+					F12C33181974BF6700C48B75 = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					F1985F791972231500277585 = {
 						TestTargetID = F1985F551972231400277585;
 					};
@@ -578,6 +641,7 @@
 			targets = (
 				F1985F551972231400277585 /* vdchecker */,
 				F1985F791972231500277585 /* vdcheckerTests */,
+				F12C33181974BF6700C48B75 /* vdcheckphp */,
 			);
 		};
 /* End PBXProject section */
@@ -595,6 +659,7 @@
 				F138A10019735FA90022F7DE /* me.png in Resources */,
 				F138A112197366470022F7DE /* botan_3.png in Resources */,
 				F1985F701972231500277585 /* Main_iPad.storyboard in Resources */,
+				F12C332C1974E06900C48B75 /* doUpdate.php in Resources */,
 				F138A17719737FF30022F7DE /* pluslife-76.png in Resources */,
 				F138A158197373400022F7DE /* ichiran@2x.png in Resources */,
 				F138A18019737FF30022F7DE /* pluslife@2x.png in Resources */,
@@ -608,6 +673,7 @@
 				F138A1191973666B0022F7DE /* topbar_check_1@2x.png in Resources */,
 				F138A14A19736F7B0022F7DE /* image_6.png in Resources */,
 				F138A14019736EAB0022F7DE /* botan_13.png in Resources */,
+				F12C33291974E06900C48B75 /* doGetDetail.php in Resources */,
 				F138A0C7197355F80022F7DE /* check_1.png in Resources */,
 				F138A14919736F7B0022F7DE /* image_5.png in Resources */,
 				F138A17E19737FF30022F7DE /* pluslife-Small@2x.png in Resources */,
@@ -618,16 +684,20 @@
 				F138A17C19737FF30022F7DE /* pluslife-Small-50@2x.png in Resources */,
 				F138A11A1973666B0022F7DE /* topbar_check_2@2x.png in Resources */,
 				F138A17619737FF30022F7DE /* pluslife-72@2x.png in Resources */,
+				F12C332E1974E06900C48B75 /* RegisterTestData.php in Resources */,
+				F12C332F1974E06900C48B75 /* ShowInfo.php in Resources */,
 				F138A13219736C790022F7DE /* image_3-1.png in Resources */,
 				F138A14B19736F7B0022F7DE /* image_7.png in Resources */,
 				F138A13119736C790022F7DE /* image_2.png in Resources */,
 				F138A153197371AB0022F7DE /* topbar_about@2x.png in Resources */,
+				F12C332A1974E06900C48B75 /* doInsert.php in Resources */,
 				F1985F751972231500277585 /* Images.xcassets in Resources */,
 				F138A10319735FA90022F7DE /* waki.png in Resources */,
 				F138A0FC19735FA90022F7DE /* hara.png in Resources */,
 				F138A106197364340022F7DE /* Section_Man@2x.png in Resources */,
 				F138A13819736D700022F7DE /* topbar_kekka_4@2x.png in Resources */,
 				F138A14119736EAB0022F7DE /* botan_14.png in Resources */,
+				F12C332D1974E06900C48B75 /* index.php in Resources */,
 				F138A17D19737FF30022F7DE /* pluslife-Small.png in Resources */,
 				F138A0FB19735FA90022F7DE /* atama.png in Resources */,
 				F138A17819737FF30022F7DE /* pluslife-76@2x.png in Resources */,
@@ -635,6 +705,7 @@
 				F138A13919736D700022F7DE /* topbar_kensa@2x.png in Resources */,
 				F138A113197366470022F7DE /* botan_4.png in Resources */,
 				F138A10219735FA90022F7DE /* nyou_ben.png in Resources */,
+				F12C332B1974E06900C48B75 /* doList.php in Resources */,
 				F138A14819736F7B0022F7DE /* image_4.png in Resources */,
 				F138A14319736ED40022F7DE /* kensa@2x.png in Resources */,
 				F138A151197371360022F7DE /* topbar_ichiran@2x.png in Resources */,
@@ -647,6 +718,7 @@
 				F138A11B1973666B0022F7DE /* topbar_check_3@2x.png in Resources */,
 				F138A123197367CD0022F7DE /* botan_7.png in Resources */,
 				F138A0BB1973534A0022F7DE /* top_2.png in Resources */,
+				F12C33281974E06900C48B75 /* doDelete.php in Resources */,
 				F138A0FD19735FA90022F7DE /* inbu.png in Resources */,
 				F1985F641972231500277585 /* InfoPlist.strings in Resources */,
 				F138A17F19737FF30022F7DE /* pluslife.png in Resources */,
@@ -711,6 +783,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F12C331F1974C96200C48B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F12C33181974BF6700C48B75 /* vdcheckphp */;
+			targetProxy = F12C331E1974C96200C48B75 /* PBXContainerItemProxy */;
+		};
 		F1985F801972231500277585 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1985F551972231400277585 /* vdchecker */;
@@ -754,6 +831,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F12C33191974BF6700C48B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F12C331A1974BF6700C48B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F1985F891972231500277585 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -904,6 +995,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F12C331B1974BF6700C48B75 /* Build configuration list for PBXAggregateTarget "vdcheckphp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12C33191974BF6700C48B75 /* Debug */,
+				F12C331A1974BF6700C48B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F1985F511972231400277585 /* Build configuration list for PBXProject "vdchecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
