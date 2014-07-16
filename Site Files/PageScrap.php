@@ -12,8 +12,8 @@ function connectToDB()
 //	$password = "test"; // MySQLサーバの管理者パスワード
 //	$server = "localhost";  // MySQLサーバを実行しているサーバアドレス
     $userName = "lans_15097304"; // MySQLサーバの管理者名
-    $password = "8~9"; // MySQLサーバの管理者パスワード
-    $server = "http://sql106.lancershost.com";  // MySQLサーバを実行しているサーバアドレス
+    $password = "8088909"; // MySQLサーバの管理者パスワード
+    $server = "sql106.lancershost.com";  // MySQLサーバを実行しているサーバアドレス
 	$db = mysql_connect($server, $userName, $password);
 	
 	if ($db != false)
@@ -23,7 +23,15 @@ function connectToDB()
 
 		// テキストエンコーディングにUTF-8を使用する
 		mysql_set_charset('utf-8');
+        
+        // 成功メッセージを表示する
+        echo "dbが繋がりました。";
 	}
+    else
+    {
+        // エラーメッセージを表示する
+        echo "dbが綱からないです。";
+    }
 	
 	return $db;
 }
@@ -34,8 +42,18 @@ function insertNewInfo($url, $title)
 	// 内容を取得する
 	$contents = file_get_contents($url);
 	if ($contents == null)
-		return false;
-	
+    {
+        // 内容を取得できませんでした。
+        echo "DBに登録しませんでした。";
+        
+        return false;
+    }
+    else
+    {
+        // 内容を取得しました。
+        echo "DBに登録しました。";
+    }
+    
 	// HTMLタグを削除する
 	$contents = strip_tags($contents);
 	
@@ -57,7 +75,15 @@ function insertNewInfo($url, $title)
 		
 		// DBから切断する
 		mysql_close($db);
-	}
+        
+        // 成功メッセージを表示する
+        echo "DBに登録しました。";
+    }
+    else
+    {
+        // エラーメッセージを表示する
+        echo "DBに登録しませんでした。";
+    }
 	
 	return $ret;
 }

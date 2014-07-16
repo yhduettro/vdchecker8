@@ -30,6 +30,21 @@
 		F12C332D1974E06900C48B75 /* index.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33251974E06900C48B75 /* index.php */; };
 		F12C332E1974E06900C48B75 /* RegisterTestData.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33261974E06900C48B75 /* RegisterTestData.php */; };
 		F12C332F1974E06900C48B75 /* ShowInfo.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33271974E06900C48B75 /* ShowInfo.php */; };
+		F12C33301974E5D800C48B75 /* doDelete.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
+		F12C33311974E5D800C48B75 /* doGetDetail.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
+		F12C33321974E5D800C48B75 /* doInsert.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33221974E06900C48B75 /* doInsert.php */; };
+		F12C33331974E5D800C48B75 /* doList.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33231974E06900C48B75 /* doList.php */; };
+		F12C33341974E5D800C48B75 /* doUpdate.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33241974E06900C48B75 /* doUpdate.php */; };
+		F12C33351974E5D800C48B75 /* index.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33251974E06900C48B75 /* index.php */; };
+		F12C33361974E5D800C48B75 /* RegisterTestData.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33261974E06900C48B75 /* RegisterTestData.php */; };
+		F12C33371974E5D800C48B75 /* ShowInfo.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33271974E06900C48B75 /* ShowInfo.php */; };
+		F12C33391975785400C48B75 /* sampleHTMLFile.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F12C33381975785400C48B75 /* sampleHTMLFile.html */; };
+		F12C333B197624A100C48B75 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F12C333A197624A100C48B75 /* Settings.bundle */; };
+		F12C33471976784D00C48B75 /* APIURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F12C333E1976784D00C48B75 /* APIURL.m */; };
+		F12C33481976784D00C48B75 /* ConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12C33401976784D00C48B75 /* ConnectionViewController.m */; };
+		F12C33491976784D00C48B75 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12C33421976784D00C48B75 /* DetailViewController.m */; };
+		F12C334A1976784D00C48B75 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12C33441976784D00C48B75 /* EditViewController.m */; };
+		F12C334B1976784D00C48B75 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12C33461976784D00C48B75 /* RootViewController.m */; };
 		F138A0B119734F000022F7DE /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A0B019734F000022F7DE /* top.png */; };
 		F138A0B51973519E0022F7DE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F138A0B41973519E0022F7DE /* PageContentViewController.m */; };
 		F138A0BA1973534A0022F7DE /* top_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A0B61973534A0022F7DE /* top_1.png */; };
@@ -97,7 +112,6 @@
 		F138A151197371360022F7DE /* topbar_ichiran@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A150197371360022F7DE /* topbar_ichiran@2x.png */; };
 		F138A153197371AB0022F7DE /* topbar_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A152197371AB0022F7DE /* topbar_about@2x.png */; };
 		F138A158197373400022F7DE /* ichiran@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A157197373400022F7DE /* ichiran@2x.png */; };
-		F138A15E1973766F0022F7DE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F138A15D1973766F0022F7DE /* FirstViewController.m */; };
 		F138A16519737F610022F7DE /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A16419737F610022F7DE /* LaunchImage.png */; };
 		F138A17419737FF30022F7DE /* pluslife-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A16719737FF30022F7DE /* pluslife-60@2x.png */; };
 		F138A17519737FF30022F7DE /* pluslife-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F138A16819737FF30022F7DE /* pluslife-72.png */; };
@@ -156,6 +170,15 @@
 			dstPath = /Users/JGO/Documents/Lancershost/quiz;
 			dstSubfolderSpec = 0;
 			files = (
+				F12C33301974E5D800C48B75 /* doDelete.php in CopyFiles */,
+				F12C33391975785400C48B75 /* sampleHTMLFile.html in CopyFiles */,
+				F12C33311974E5D800C48B75 /* doGetDetail.php in CopyFiles */,
+				F12C33321974E5D800C48B75 /* doInsert.php in CopyFiles */,
+				F12C33331974E5D800C48B75 /* doList.php in CopyFiles */,
+				F12C33341974E5D800C48B75 /* doUpdate.php in CopyFiles */,
+				F12C33351974E5D800C48B75 /* index.php in CopyFiles */,
+				F12C33361974E5D800C48B75 /* RegisterTestData.php in CopyFiles */,
+				F12C33371974E5D800C48B75 /* ShowInfo.php in CopyFiles */,
 				F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +194,18 @@
 		F12C33251974E06900C48B75 /* index.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = index.php; path = "Site Files/index.php"; sourceTree = SOURCE_ROOT; };
 		F12C33261974E06900C48B75 /* RegisterTestData.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = RegisterTestData.php; path = "Site Files/RegisterTestData.php"; sourceTree = SOURCE_ROOT; };
 		F12C33271974E06900C48B75 /* ShowInfo.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = ShowInfo.php; path = "Site Files/ShowInfo.php"; sourceTree = SOURCE_ROOT; };
+		F12C33381975785400C48B75 /* sampleHTMLFile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleHTMLFile.html; sourceTree = "<group>"; };
+		F12C333A197624A100C48B75 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		F12C333D1976784D00C48B75 /* APIURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIURL.h; path = ViewControllers/RemoteController/APIURL.h; sourceTree = "<group>"; };
+		F12C333E1976784D00C48B75 /* APIURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIURL.m; path = ViewControllers/RemoteController/APIURL.m; sourceTree = "<group>"; };
+		F12C333F1976784D00C48B75 /* ConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionViewController.h; path = ViewControllers/RemoteController/ConnectionViewController.h; sourceTree = "<group>"; };
+		F12C33401976784D00C48B75 /* ConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionViewController.m; path = ViewControllers/RemoteController/ConnectionViewController.m; sourceTree = "<group>"; };
+		F12C33411976784D00C48B75 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ViewControllers/RemoteController/DetailViewController.h; sourceTree = "<group>"; };
+		F12C33421976784D00C48B75 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ViewControllers/RemoteController/DetailViewController.m; sourceTree = "<group>"; };
+		F12C33431976784D00C48B75 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = ViewControllers/RemoteController/EditViewController.h; sourceTree = "<group>"; };
+		F12C33441976784D00C48B75 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = ViewControllers/RemoteController/EditViewController.m; sourceTree = "<group>"; };
+		F12C33451976784D00C48B75 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ViewControllers/RemoteController/RootViewController.h; sourceTree = "<group>"; };
+		F12C33461976784D00C48B75 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ViewControllers/RemoteController/RootViewController.m; sourceTree = "<group>"; };
 		F138A0B019734F000022F7DE /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = top.png; path = Images/top.png; sourceTree = "<group>"; };
 		F138A0B31973519E0022F7DE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = ViewControllers/PageContentViewController.h; sourceTree = "<group>"; };
 		F138A0B41973519E0022F7DE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageContentViewController.m; path = ViewControllers/PageContentViewController.m; sourceTree = "<group>"; };
@@ -250,8 +285,6 @@
 		F138A150197371360022F7DE /* topbar_ichiran@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_ichiran@2x.png"; path = "Images/topbars/topbar_ichiran@2x.png"; sourceTree = "<group>"; };
 		F138A152197371AB0022F7DE /* topbar_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_about@2x.png"; path = "Images/topbars/topbar_about@2x.png"; sourceTree = "<group>"; };
 		F138A157197373400022F7DE /* ichiran@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ichiran@2x.png"; path = "Images/ichiran@2x.png"; sourceTree = "<group>"; };
-		F138A15C1973766F0022F7DE /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
-		F138A15D1973766F0022F7DE /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
 		F138A16419737F610022F7DE /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = Images/LaunchImage.png; sourceTree = "<group>"; };
 		F138A16719737FF30022F7DE /* pluslife-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pluslife-60@2x.png"; path = "Images/icons/pluslife-60@2x.png"; sourceTree = "<group>"; };
 		F138A16819737FF30022F7DE /* pluslife-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pluslife-72.png"; path = "Images/icons/pluslife-72.png"; sourceTree = "<group>"; };
@@ -316,6 +349,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F12C333C197677E600C48B75 /* RemoteController */ = {
+			isa = PBXGroup;
+			children = (
+				F12C333D1976784D00C48B75 /* APIURL.h */,
+				F12C333E1976784D00C48B75 /* APIURL.m */,
+				F12C333F1976784D00C48B75 /* ConnectionViewController.h */,
+				F12C33401976784D00C48B75 /* ConnectionViewController.m */,
+				F12C33411976784D00C48B75 /* DetailViewController.h */,
+				F12C33421976784D00C48B75 /* DetailViewController.m */,
+				F12C33431976784D00C48B75 /* EditViewController.h */,
+				F12C33441976784D00C48B75 /* EditViewController.m */,
+				F12C33451976784D00C48B75 /* RootViewController.h */,
+				F12C33461976784D00C48B75 /* RootViewController.m */,
+			);
+			name = RemoteController;
+			sourceTree = "<group>";
+		};
 		F138A0A9197345FD0022F7DE /* Swift Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,8 +409,7 @@
 		F138A0B21973514F0022F7DE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F138A15C1973766F0022F7DE /* FirstViewController.h */,
-				F138A15D1973766F0022F7DE /* FirstViewController.m */,
+				F12C333C197677E600C48B75 /* RemoteController */,
 				F138A0B31973519E0022F7DE /* PageContentViewController.h */,
 				F138A0B41973519E0022F7DE /* PageContentViewController.m */,
 				F138A0C8197356CD0022F7DE /* PLCheckStartViewController.h */,
@@ -530,6 +579,7 @@
 				F1985F621972231500277585 /* InfoPlist.strings */,
 				F1985F651972231500277585 /* main.m */,
 				F1985F671972231500277585 /* vdchecker-Prefix.pch */,
+				F12C333A197624A100C48B75 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -565,6 +615,7 @@
 				F12C33271974E06900C48B75 /* ShowInfo.php */,
 				F1985F921972235600277585 /* PageScrap.php */,
 				F1985F931972235600277585 /* RemoteInfo */,
+				F12C33381975785400C48B75 /* sampleHTMLFile.html */,
 			);
 			name = "Site Files";
 			sourceTree = "<group>";
@@ -727,6 +778,7 @@
 				F138A0FA19735FA90022F7DE /* ashi.png in Resources */,
 				F138A17919737FF30022F7DE /* pluslife-Small-40.png in Resources */,
 				F138A0BA1973534A0022F7DE /* top_1.png in Resources */,
+				F12C333B197624A100C48B75 /* Settings.bundle in Resources */,
 				F138A0BC1973534A0022F7DE /* top_3.png in Resources */,
 				F138A110197366470022F7DE /* botan_1.png in Resources */,
 				F138A125197367CD0022F7DE /* botan_9.png in Resources */,
@@ -753,7 +805,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1985F6A1972231500277585 /* PLAppDelegate.m in Sources */,
-				F138A15E1973766F0022F7DE /* FirstViewController.m in Sources */,
 				F138A0E819735D510022F7DE /* TiryouTableViewController.m in Sources */,
 				F138A0DC19735C6D0022F7DE /* WLMyJournal.m in Sources */,
 				F138A0EB19735D9A0022F7DE /* KennsaKitViewController.m in Sources */,
@@ -762,10 +813,15 @@
 				F138A18C1973B8BE0022F7DE /* vdAbout.swift in Sources */,
 				F138A0B51973519E0022F7DE /* PageContentViewController.m in Sources */,
 				F138A0E219735CED0022F7DE /* ResultBViewController.m in Sources */,
+				F12C334A1976784D00C48B75 /* EditViewController.m in Sources */,
 				F138A0D2197358420022F7DE /* CheckWomanTableViewController.m in Sources */,
 				F138A0EE19735DF40022F7DE /* MyViewController.m in Sources */,
+				F12C33481976784D00C48B75 /* ConnectionViewController.m in Sources */,
 				F138A0D919735B040022F7DE /* WLSectionHeaderView.m in Sources */,
 				F138A0CA197356CD0022F7DE /* PLCheckStartViewController.m in Sources */,
+				F12C33491976784D00C48B75 /* DetailViewController.m in Sources */,
+				F12C33471976784D00C48B75 /* APIURL.m in Sources */,
+				F12C334B1976784D00C48B75 /* RootViewController.m in Sources */,
 				F1985F731972231500277585 /* PLViewController.m in Sources */,
 				F1985F661972231500277585 /* main.m in Sources */,
 				F138A0E719735D510022F7DE /* GaiyouTableViewController.m in Sources */,
@@ -1002,6 +1058,7 @@
 				F12C331A1974BF6700C48B75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1985F511972231400277585 /* Build configuration list for PBXProject "vdchecker" */ = {
 			isa = XCConfigurationList;
