@@ -1,3 +1,11 @@
+//
+//  ConnectionViewController.h
+//  vdchecker
+//
+//  Created by younghwan moon on 7/16/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
 
 // 「ConnectionViewController」クラスの宣言

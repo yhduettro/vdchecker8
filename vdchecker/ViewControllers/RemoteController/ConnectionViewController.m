@@ -1,3 +1,11 @@
+//
+//  ConnectionViewController.m
+//  vdchecker
+//
+//  Created by younghwan moon on 7/16/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
+//
+
 #import "ConnectionViewController.h"
 
 // HTTPのステータスコードを格納したエラー情報を示すドメイン
@@ -12,20 +20,15 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 @synthesize response = _response;
 
 // イニシャライザ
-- (id)initWithNibName:(NSString *)nibNameOrNil
-               bundle:(NSBundle *)nibBundleOrNil
+- (void)viewDidLoad
 {
-    self = [super initWithNibName:nibNameOrNil
-                           bundle:nibBundleOrNil];
-    if (self)
-    {
-        // メンバー変数の初期化
-        _urlRequest = nil;
-        _connection = nil;
-        _downloadedData = nil;
-        _response = nil;
-    }
-    return self;
+    [super viewDidLoad];
+
+    // メンバー変数の初期化
+    _urlRequest = nil;
+    _connection = nil;
+    _downloadedData = nil;
+    _response = nil;
 }
 
 // デバイスを回転させるか判定する処理

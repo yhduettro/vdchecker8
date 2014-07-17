@@ -1,6 +1,6 @@
 //
 //  ResultBViewController.h
-//  PageViewDemo
+//  vdchecker
 //
 //  Created by younghwan moon on 6/28/14.
 //  Copyright (c) 2014 Appcoda. All rights reserved.

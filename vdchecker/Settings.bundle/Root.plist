@@ -16,7 +16,7 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 			<key>DefaultValue</key>
-			<string>http://&lt;domain&gt;/PageScrap</string>
+			<string>http://quiz.lancershost.com</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>
