@@ -1,3 +1,11 @@
+//
+//  DetailViewController.m
+//  vdchecker
+//
+//  Created by younghwan moon on 7/18/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
+//
+
 #import "DetailViewController.h"
 #import "ConnectionViewController.h"
 #import "APIURL.h"
@@ -74,15 +82,15 @@
         vc = [[ConnectionViewController alloc] initWithNibName:nil
                                                         bundle:nil];
         [vc setUrlRequest:req];
-        [self presentModalViewController:vc
-                                animated:NO];
+//        [self presentModalViewController:vc animated:NO];
+        [self presentViewController:vc animated:NO completion:nil];
         
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
-        if (vc.view.window)
-        {
+//        if (vc.view.window)
+//        {
             [self setConnectionViewController:vc];
-        }
+//        }
         
 //        [vc release];
     }
@@ -168,18 +176,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    // 「Edit」ボタンを作成する
-    UIBarButtonItem *button;
-    button = [[UIBarButtonItem alloc]
-              initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-              target:self
-              action:@selector(edit:)];
-    
-    // ナビゲーションバーに追加する
-    [self.navigationItem setRightBarButtonItem:button];
-    
-//    [button release];
 }
 
 // ビューが非表示になる直前に呼ばれるメソッド
@@ -188,7 +184,7 @@
     [super viewWillDisappear:animated];
     
     // 「viewWillAppear:」で追加した「Edit」ボタンを削除する
-    [self.navigationItem setRightBarButtonItem:nil];
+//    [self.navigationItem setRightBarButtonItem:nil];
 }
 
 // 「Edit」ボタンが押されたときの処理

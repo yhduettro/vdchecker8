@@ -1,3 +1,11 @@
+//
+//  DetailViewController.h
+//  vdchecker
+//
+//  Created by younghwan moon on 7/18/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
 
 // 「ConnectionViewController」クラスが存在することを宣言

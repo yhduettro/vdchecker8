@@ -2,7 +2,7 @@
 //  ConnectionViewController.m
 //  vdchecker
 //
-//  Created by younghwan moon on 7/16/14.
+//  Created by younghwan moon on 6/21/14.
 //  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
@@ -20,16 +20,31 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 @synthesize response = _response;
 
 // イニシャライザ
-- (void)viewDidLoad
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
 {
-    [super viewDidLoad];
-
-    // メンバー変数の初期化
-    _urlRequest = nil;
-    _connection = nil;
-    _downloadedData = nil;
-    _response = nil;
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
+    if (self)
+    {
+        // メンバー変数の初期化
+        _urlRequest = nil;      //3
+        _connection = nil;
+        _downloadedData = nil;
+        _response = nil;
+    }
+    return self;
 }
+
+// 解放処理
+//- (void)dealloc
+//{
+//    [_urlRequest release];
+//    [_connection release];
+//    [_downloadedData release];
+//    [_response release];
+//    [super dealloc];
+//}
 
 // デバイスを回転させるか判定する処理
 - (BOOL)shouldAutorotateToInterfaceOrientation:
@@ -39,22 +54,12 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
     return YES;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    // 親クラスの処理を呼び出す
-    [super viewWillAppear:animated];
-
-    UINavigationBar *naviBar = [self.navigationController navigationBar];
-    naviBar.backgroundColor = [UIColor clearColor];
-    naviBar.hidden = YES;
-}
-
 // ビューが表示された直後に呼ばれるメソッド
 // ここでは、通信を始める
 - (void)viewDidAppear:(BOOL)animated
 {
     // 親クラスの処理を呼び出す
-    [super viewDidAppear:animated];
+    [super viewDidAppear:animated];     //4
     
     // 接続要求を取得する
     NSURLRequest *request = self.urlRequest;
@@ -74,7 +79,8 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
         
         // 通信画面を閉じる
         // 即座に閉じたいのでアニメーションは行わない
-        [self dismissModalViewControllerAnimated:NO];
+//        [self dismissModalViewControllerAnimated:NO];
+        [self dismissViewControllerAnimated:NO completion:nil];
         return;
     }
     
@@ -93,7 +99,8 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 {
     // 通信画面を閉じる
     // 即座に閉じたいのでアニメーションは行わない
-    [self dismissModalViewControllerAnimated:NO];
+//    [self dismissModalViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:NO completion:nil]; //7
 }
 
 // データ取得失敗時に呼ばれるメソッド
@@ -117,10 +124,12 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
                              cancelButtonTitle:@"OK"
                              otherButtonTitles:nil];
     [alert show];
+//    [alert release];
     
     // 通信画面を閉じる
     // 即座に閉じたいのでアニメーションは行わない
-    [self dismissModalViewControllerAnimated:NO];
+//    [self dismissModalViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 // レスポンスを受け取った直後に呼ばれるメソッド
@@ -128,7 +137,7 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 didReceiveResponse:(NSURLResponse *)response
 {
     // レスポンスを記憶する
-    [self setResponse:response];
+    [self setResponse:response];    //5
     
     // もし、「response」が「NSHTTPURLResponse」ならば
     // HTTPのステータスコードもチェックする
@@ -173,7 +182,7 @@ didReceiveResponse:(NSURLResponse *)response
     didReceiveData:(NSData *)data
 {
     // 格納先のバッファを確保する
-    NSMutableData *downloadedData = self.downloadedData;
+    NSMutableData *downloadedData = self.downloadedData;    //6
     
     if (!downloadedData)
     {
@@ -193,7 +202,8 @@ didReceiveResponse:(NSURLResponse *)response
     [self.connection cancel];
     
     // 通信画面を閉じる
-    [self dismissModalViewControllerAnimated:NO];
+//    [self dismissModalViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end

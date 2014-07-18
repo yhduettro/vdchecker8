@@ -1,3 +1,11 @@
+//
+//  RootViewController.m
+//  vdchecker
+//
+//  Created by younghwan moon on 7/18/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
+//
+
 #import "RootViewController.h"
 #import "ConnectionViewController.h"
 #import "APIURL.h"
@@ -7,6 +15,12 @@
 // プロパティ「itemArray」の配列に入れる、辞書のキー
 static NSString *kTitleKey = @"title";
 static NSString *kIDKey = @"ID";
+
+@interface RootViewController()
+{
+    NSString *recordID;
+}
+@end
 
 @implementation RootViewController
 
@@ -67,7 +81,7 @@ static NSString *kIDKey = @"ID";
         // 通信前なので、サーバと通信する
         // 接続先のURLを作成する
         // ここでの接続先は、情報の一覧を取得するAPIへのURL
-        NSURL *url = [NSURL URLToDoList];
+        NSURL *url = [NSURL URLToDoList];   //1
         
         // 接続要求を作成する
         NSURLRequest *req;
@@ -78,15 +92,16 @@ static NSString *kIDKey = @"ID";
         vc = [[ConnectionViewController alloc] initWithNibName:nil
                                                         bundle:nil];
         [vc setUrlRequest:req];
-        [self presentModalViewController:vc
-                                animated:NO];
+//        [self presentModalViewController:vc
+//                                animated:NO];
+        [self presentViewController:vc animated:NO completion:nil];
         
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
-        if (vc.view.window)
-        {
+//        if (vc.view.window)
+//        {
             [self setConnectionViewController:vc];
-        }
+//        }
         
 //        [vc release];
     }
@@ -209,19 +224,19 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSDictionary *dict;
     dict = [self.itemArray objectAtIndex:indexPath.row];
     
-    NSString *recordID = [dict objectForKey:kIDKey];
+    recordID = [dict objectForKey:kIDKey];
     
     // IDが取得できたら、情報表示画面を作成して、IDを渡して表示する
-    if (recordID)
-    {
-        DetailViewController *vc;
-        vc = [[DetailViewController alloc] initWithNibName:nil
-                                                    bundle:nil];
-        [vc setRecordID:recordID];
-        [self.navigationController pushViewController:vc
-                                             animated:YES];     
-//        [vc release];
-    }
+//    if (recordID)
+//    {
+//        DetailViewController *vc;
+//        vc = [[DetailViewController alloc] initWithNibName:nil
+//                                                    bundle:nil];
+//        [vc setRecordID:recordID];
+//        [self.navigationController pushViewController:vc
+//                                             animated:YES];     
+////        [vc release];
+//    }
 }
 
 // ビューが表示される直前に呼ばれるメソッド
@@ -229,16 +244,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [super viewWillAppear:animated];
     
-    // 「+」ボタンを作成する
-    // ボタンが押されたら「add:」メソッドを呼び出すようにする
-    UIBarButtonItem *button;
-    button = [[UIBarButtonItem alloc]
-              initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-              target:self
-              action:@selector(add:)];
-    
-    // ナビゲーションバーの右側にボタンを追加する
-    [self.navigationItem setRightBarButtonItem:button];
+//    // 「+」ボタンを作成する
+//    // ボタンが押されたら「add:」メソッドを呼び出すようにする
+//    UIBarButtonItem *button;
+//    button = [[UIBarButtonItem alloc]
+//              initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+//              target:self
+//              action:@selector(add:)];
+//    
+//    // ナビゲーションバーの右側にボタンを追加する
+//    [self.navigationItem setRightBarButtonItem:button];
     
 //    [button release];
 }
@@ -249,22 +264,21 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [super viewWillDisappear:animated];
     
     // 「viewWillAppear:」メソッドで追加したボタンを削除する
-    [self.navigationItem setRightBarButtonItem:nil];
+//    [self.navigationItem setRightBarButtonItem:nil];
 }
 
-// 「+」ボタンが押されたときに呼ばれるメソッド
-- (IBAction)add:(id)sender
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // 編集画面を作成する
-    EditViewController *vc;
-    vc = [[EditViewController alloc] initWithNibName:nil
-                                              bundle:nil];
-    
-    // 編集画面を表示する
-    [self.navigationController pushViewController:vc
-                                         animated:YES];
-    
-//    [vc release];
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showDetailView"]) {
+        DetailViewController *detailVC = [segue destinationViewController];
+        detailVC.recordID = recordID;
+    }
 }
+
 
 @end

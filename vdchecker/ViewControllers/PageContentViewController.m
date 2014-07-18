@@ -3,7 +3,7 @@
 //  vdchecker
 //
 //  Created by Simon on 24/11/13.
-//  Copyright (c) 2013 Appcoda. All rights reserved.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
 #import "PageContentViewController.h"

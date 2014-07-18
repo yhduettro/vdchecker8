@@ -1,3 +1,11 @@
+//
+//  EditViewController.m
+//  vdchecker
+//
+//  Created by younghwan moon on 7/18/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
+//
+
 #import "EditViewController.h"
 #import "ConnectionViewController.h"
 #import "APIURL.h"
@@ -72,14 +80,14 @@
     
     // ナビゲーションバーに「Save」ボタンを追加する
     // ボタンが押されたときは、「save:」メソッドを呼び出すようにする
-    UIBarButtonItem *button;
-    SEL sel = @selector(save:);
-    
-    button = [[UIBarButtonItem alloc]
-              initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-              target:self
-              action:sel];
-    [self.navigationItem setRightBarButtonItem:button];
+//    UIBarButtonItem *button;
+//    SEL sel = @selector(save:);
+//    
+//    button = [[UIBarButtonItem alloc]
+//              initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+//              target:self
+//              action:sel];
+//    [self.navigationItem setRightBarButtonItem:button];
 //    [button release];
     
     // 登録情報編集機能のときだけ、「Delete」ボタンを表示する

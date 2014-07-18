@@ -2,7 +2,7 @@
 //  ConnectionViewController.h
 //  vdchecker
 //
-//  Created by younghwan moon on 7/16/14.
+//  Created by younghwan moon on 6/21/14.
 //  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
