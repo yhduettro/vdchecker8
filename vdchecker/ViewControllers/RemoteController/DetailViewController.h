@@ -28,6 +28,7 @@
 }
 
 // プロパティの定義
+@property (retain, nonatomic) IBOutlet UILabel *titleLabel;
 @property (retain, nonatomic) IBOutlet UILabel *urlLabel;
 @property (retain, nonatomic) IBOutlet UITextView *contentTextView;
 @property (retain, nonatomic) NSString *recordID;

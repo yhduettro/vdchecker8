@@ -1060,17 +1060,17 @@
         <!--Connection View Controller-->
         <scene sceneID="BbW-GQ-B7f">
             <objects>
-                <viewController id="Jho-2D-iit" customClass="ConnectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConnectionViewC" id="Jho-2D-iit" customClass="ConnectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LBX-80-WOR"/>
                         <viewControllerLayoutGuide type="bottom" id="4us-VJ-T9Q"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oi9-A4-AcA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="oi9-A4-AcA">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az3-qC-ICj">
-                                <rect key="frame" x="44" y="130" width="232" height="168"/>
+                                <rect key="frame" x="15" y="50" width="232" height="168"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="サーバに繋ぐ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7d-ls-CdN">
                                         <rect key="frame" x="16" y="20" width="200" height="21"/>
@@ -1095,11 +1095,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="260" height="240"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFT-AB-X0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1108,7 +1112,7 @@
         <!--Detail-->
         <scene sceneID="AUd-7F-MSj">
             <objects>
-                <viewController id="6Np-Sq-Dop" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="6Np-Sq-Dop" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tdh-34-UN1"/>
                         <viewControllerLayoutGuide type="bottom" id="Rm1-e6-hG8"/>
@@ -1117,31 +1121,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-ef-xhe">
-                                <rect key="frame" x="20" y="73" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swA-Jd-bYy">
-                                <rect key="frame" x="20" y="113" width="251" height="21"/>
+                                <rect key="frame" x="20" y="131" width="251" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-m0-6sG">
-                                <rect key="frame" x="20" y="158" width="280" height="390"/>
+                                <rect key="frame" x="20" y="188" width="280" height="360"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-nB-SKR">
-                                <rect key="frame" x="279" y="112" width="22" height="22"/>
+                                <rect key="frame" x="279" y="131" width="22" height="22"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1161915852" green="0.29736868589999998" blue="0.68397241710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="openURL:" destination="6Np-Sq-Dop" eventType="touchUpInside" id="MzM-Sf-aTg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-ef-xhe">
+                                <rect key="frame" x="20" y="91" width="209" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1149,15 +1157,21 @@
                         <barButtonItem key="rightBarButtonItem" title="Edit    " id="3dV-4X-1hJ">
                             <connections>
                                 <action selector="edit:" destination="6Np-Sq-Dop" id="0aE-2S-xul"/>
+                                <segue destination="cp5-Sa-MHe" kind="push" identifier="showEditView" id="0h0-P9-cO0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="3T5-m0-6sG" id="zRv-xr-duO"/>
+                        <outlet property="titleLabel" destination="Wew-ef-xhe" id="mFa-vo-4Xb"/>
+                        <outlet property="urlLabel" destination="swA-Jd-bYy" id="suS-sn-TAd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXx-Rq-DiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5236" y="1770"/>
         </scene>
-        <!--Page List-->
+        <!--List-->
         <scene sceneID="KIB-4Z-OPe">
             <objects>
                 <tableViewController id="dPY-IH-tTV" customClass="RootViewController" sceneMemberID="viewController">
@@ -1172,7 +1186,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6Np-Sq-Dop" kind="push" identifier="showDetailView" id="UIn-fe-1cG"/>
+                                    <segue destination="6Np-Sq-Dop" kind="push" identifier="showDetailView" id="fmm-zg-MaN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1181,7 +1195,7 @@
                             <outlet property="delegate" destination="dPY-IH-tTV" id="r7F-Uk-pT9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Page List" id="2zu-QV-I5S">
+                    <navigationItem key="navigationItem" title="List" id="2zu-QV-I5S">
                         <barButtonItem key="rightBarButtonItem" title="+     " id="bde-53-LOv">
                             <connections>
                                 <action selector="add:" destination="dPY-IH-tTV" id="T3v-Tc-U6t"/>
@@ -1194,7 +1208,7 @@
             </objects>
             <point key="canvasLocation" x="5236" y="1094"/>
         </scene>
-        <!--Edit Page-->
+        <!--Edit-->
         <scene sceneID="zls-FO-L2o">
             <objects>
                 <viewController id="cp5-Sa-MHe" customClass="EditViewController" sceneMemberID="viewController">
@@ -1243,7 +1257,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Page" id="1Db-at-GUP">
+                    <navigationItem key="navigationItem" title="Edit" id="1Db-at-GUP">
                         <barButtonItem key="rightBarButtonItem" title="Save   " id="H4c-ON-nXC">
                             <connections>
                                 <action selector="save:" destination="cp5-Sa-MHe" id="mxy-sy-m0B"/>
@@ -1258,7 +1272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnj-xt-Z2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5657" y="1094"/>
+            <point key="canvasLocation" x="5672" y="1094"/>
         </scene>
     </scenes>
     <resources>
@@ -1302,7 +1316,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="DGI-N2-dpL"/>
         <segue reference="Nw8-CC-Z0h"/>
-        <segue reference="Zo3-hR-3rG"/>
         <segue reference="2hp-X6-b3v"/>
+        <segue reference="Zo3-hR-3rG"/>
+        <segue reference="c2x-vn-DfS"/>
     </inferredMetricsTieBreakers>
 </document>

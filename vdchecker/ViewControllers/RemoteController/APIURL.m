@@ -24,7 +24,8 @@ static NSString *kDoGetDetail = @"doGetDetail.php";
     NSString *str = [userDefaults stringForKey:kServerURL];
 //    NSString *str = @"http://quiz.lancershost.com";
 
-    NSURL *serverURL = [NSURL URLWithString:str];   //2
+//    NSURL *serverURL = [NSURL URLWithString:str];   //2
+    NSURL *serverURL = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     // APIのパスを使って相対URLを作成する
     NSURL *resultURL;

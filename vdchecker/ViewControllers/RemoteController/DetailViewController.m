@@ -33,15 +33,6 @@
     return self;
 }
 
-//// 解放処理
-//- (void)dealloc
-//{
-//    [_urlLabel release];
-//    [_contentTextView release];
-//    [_recordID release];
-//    [_connectionViewController release];
-//    [super dealloc];
-//}
 
 // デバイスを回転させるか判定する処理
 - (BOOL)shouldAutorotateToInterfaceOrientation:
@@ -82,8 +73,8 @@
         vc = [[ConnectionViewController alloc] initWithNibName:nil
                                                         bundle:nil];
         [vc setUrlRequest:req];
-//        [self presentModalViewController:vc animated:NO];
-        [self presentViewController:vc animated:NO completion:nil];
+
+        [self presentViewController:vc animated:NO completion:^{ }];
         
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
@@ -91,8 +82,6 @@
 //        {
             [self setConnectionViewController:vc];
 //        }
-        
-//        [vc release];
     }
 }
 
@@ -148,7 +137,8 @@
         
         // 読み込んだ内容を表示する
         if (titleStr)
-            [self setTitle:titleStr];
+//            [self setTitle:titleStr];
+            [self.titleLabel setText:titleStr];
         if (urlStr)
             [self.urlLabel setText:urlStr];
         if (contentStr)
@@ -187,25 +177,20 @@
 //    [self.navigationItem setRightBarButtonItem:nil];
 }
 
-// 「Edit」ボタンが押されたときの処理
-- (IBAction)edit:(id)sender
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // 登録情報編集画面を作成する
-    EditViewController *vc;
-    
-    vc = [[EditViewController alloc] initWithNibName:nil
-                                              bundle:nil];
-    
-    // 現在のURLとタイトル、IDを設定する
-    [vc setRecordTitle:self.title];
-    [vc setUrlString:self.urlLabel.text];
-    [vc setRecordID:self.recordID];
-    
-    // 画面を表示する
-    [self.navigationController pushViewController:vc
-                                         animated:YES];
-    
-//    [vc release];
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showEditView"]) {
+        EditViewController *editVC = [segue destinationViewController];
+        editVC.recordTitle = self.titleLabel.text;
+        editVC.urlString = self.urlLabel.text;
+        editVC.recordID = self.recordID;
+    }
 }
 
 @end

@@ -40,23 +40,11 @@ static NSString *kIDKey = @"ID";
     return self;
 }
 
-//// 解放処理
-//- (void)dealloc
-//{
-//    // 念のために入れている解放処理
-//    // ここまでくる前に、「_connectionViewController」は
-//    // 解放されて、「nil」になっているはず。
-//    [_connectionViewController release];
-//    [_itemArray release];
-//    [super dealloc];
-//}
 
 // ビューの初期化処理
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // タイトルを設定する
-    [self setTitle:@"Page List"];
 }
 
 // ビューが表示された直後の処理
@@ -92,18 +80,17 @@ static NSString *kIDKey = @"ID";
         vc = [[ConnectionViewController alloc] initWithNibName:nil
                                                         bundle:nil];
         [vc setUrlRequest:req];
-//        [self presentModalViewController:vc
-//                                animated:NO];
-        [self presentViewController:vc animated:NO completion:nil];
-        
+
+//        [self presentViewController:vc animated:NO completion:nil];
+        [self presentViewController:vc animated:NO completion:^{ }];
+
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
 //        if (vc.view.window)
 //        {
             [self setConnectionViewController:vc];
 //        }
-        
-//        [vc release];
+
     }
 }
 
@@ -142,7 +129,6 @@ static NSString *kIDKey = @"ID";
     if (cell == nil)
     {
         // 再利用できないので作成する
-//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
@@ -177,7 +163,6 @@ static NSString *kIDKey = @"ID";
         
         // 文字列化する
         NSString *text;
-//        text = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
         text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         // 行に分割する
@@ -186,9 +171,6 @@ static NSString *kIDKey = @"ID";
         // 行の内容を解析して、辞書の配列を作成する
         for (NSString *l in lines)
         {
-//            NSAutoreleasePool *pool;
-//            pool = [[NSAutoreleasePool alloc] init];
-            
             // 「,」で文字列を分割する
             NSArray *tokens = [l componentsSeparatedByString:@","];
             
@@ -206,8 +188,6 @@ static NSString *kIDKey = @"ID";
                 // 配列に追加する
                 [newItems addObject:dict];
             }
-            
-//            [pool drain];
         }
     }
     
@@ -216,28 +196,6 @@ static NSString *kIDKey = @"ID";
     [self.tableView reloadData];
 }
 
-// 項目が選択されたときの処理
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // 選択された項目のIDを取得する
-    NSDictionary *dict;
-    dict = [self.itemArray objectAtIndex:indexPath.row];
-    
-    recordID = [dict objectForKey:kIDKey];
-    
-    // IDが取得できたら、情報表示画面を作成して、IDを渡して表示する
-//    if (recordID)
-//    {
-//        DetailViewController *vc;
-//        vc = [[DetailViewController alloc] initWithNibName:nil
-//                                                    bundle:nil];
-//        [vc setRecordID:recordID];
-//        [self.navigationController pushViewController:vc
-//                                             animated:YES];     
-////        [vc release];
-//    }
-}
 
 // ビューが表示される直前に呼ばれるメソッド
 - (void)viewWillAppear:(BOOL)animated
@@ -272,6 +230,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSDictionary *dict;
+//    dict = [self.itemArray objectAtIndex:indexPath.row];
+    dict = [self.itemArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    recordID = [dict objectForKey:kIDKey];
+
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"showDetailView"]) {

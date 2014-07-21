@@ -38,18 +38,6 @@
     return self;
 }
 
-//// 解放処理
-//- (void)dealloc
-//{
-//    [_deleteButton release];
-//    [_urlTextField release];
-//    [_titleTextField release];
-//    [_urlString release];
-//    [_recordTitle release];
-//    [_recordID release];
-//    [_connectionViewController release];
-//    [super dealloc];
-//}
 
 // デバイスを回転させるか判定する処理
 - (BOOL)shouldAutorotateToInterfaceOrientation:
@@ -132,7 +120,6 @@
                      cancelButtonTitle:@"OK"
                      otherButtonTitles:nil];
             [alert show];
-//            [alert release];
         }
     }
 }
@@ -202,15 +189,15 @@
         vc = [[ConnectionViewController alloc] initWithNibName:nil
                                                         bundle:nil];
         [vc setUrlRequest:req];
-        [self presentModalViewController:vc
-                                animated:NO];
         
+        [self presentViewController:vc animated:NO completion:^{ }];
+
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
-        if (vc.view.window)
-        {
+//        if (vc.view.window)
+//        {
             [self setConnectionViewController:vc];
-        }
+//        }
         
 //        [vc release];
     }
@@ -233,7 +220,7 @@
         
         // 文字列化する
         NSString *text;
-//        text = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+
         text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
         // 「1」が取得できていたら成功
@@ -259,18 +246,19 @@
     // キーと値はどちらもURLエンコードを行い、スペースは「+」に置き換える
     for (NSString *key in [dict allKeys])
     {
-//        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
         NSString *value = [dict objectForKey:key];
         
         // スペースを「+」に置き換える
         NSString *key1 = [key stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-        [key copy:(id)key1];
+        
+        NSString *key2;
+        [key2 copy:(id)key1];
         
         value = [value stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
         // URLエンコードを行う
-        key1 = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [key copy:(id)key1];
+        key1 = [key2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        [key2 copy:(id)key1];
     
         value = [value stringByAddingPercentEscapesUsingEncoding:
                  NSUTF8StringEncoding];
@@ -281,9 +269,7 @@
             [str appendString:@"&"];
         }
         
-        [str appendFormat:@"%@=%@", key, value];
-        
-//        [pool drain];
+        [str appendFormat:@"%@=%@", key1, value];
     }
     
     // 作成した文字列をUTF-8で符号化する
@@ -344,23 +330,21 @@
     // POSTのデータとして設定する
     [req setHTTPBody:data];
 	
-    // ページリスト画面まで戻す
-    // ただし、この時点でビューコントローラが解放されると困るので
-    // 参照カウンタを増やす
-//    [self retain];
-    [self.navigationController popToRootViewControllerAnimated:NO];
-    
+//    // ページリスト画面まで戻す
+//    // ただし、この時点でビューコントローラが解放されると困るので
+//    // 参照カウンタを増やす
+//    [self.navigationController popToRootViewControllerAnimated:NO];
+
     // 通信画面を表示して、通信を開始する
     ConnectionViewController *vc;
     vc = [[ConnectionViewController alloc] initWithNibName:nil
                                                     bundle:nil];
     [vc setUrlRequest:req];
-    [self presentModalViewController:vc
-                            animated:NO];
-//    [vc release];
+
+    [self presentViewController:vc animated:NO completion:^{
     
-    // 上で参照カウンタを増やしているので、ここで解放する
-//    [self release];
+        [self.navigationController popViewControllerAnimated:NO];
+    }];
 }
 
 @end

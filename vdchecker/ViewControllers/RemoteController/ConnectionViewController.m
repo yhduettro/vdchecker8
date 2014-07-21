@@ -23,8 +23,10 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil
-                           bundle:nibBundleOrNil];
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
+                                                  bundle:nil];
+    self = [sb instantiateViewControllerWithIdentifier:@"ConnectionViewC"];
     if (self)
     {
         // メンバー変数の初期化
@@ -36,15 +38,6 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
     return self;
 }
 
-// 解放処理
-//- (void)dealloc
-//{
-//    [_urlRequest release];
-//    [_connection release];
-//    [_downloadedData release];
-//    [_response release];
-//    [super dealloc];
-//}
 
 // デバイスを回転させるか判定する処理
 - (BOOL)shouldAutorotateToInterfaceOrientation:
@@ -79,8 +72,8 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
         
         // 通信画面を閉じる
         // 即座に閉じたいのでアニメーションは行わない
-//        [self dismissModalViewControllerAnimated:NO];
-        [self dismissViewControllerAnimated:NO completion:nil];
+        [self dismissViewControllerAnimated:NO completion:^{ }];
+
         return;
     }
     
@@ -99,8 +92,7 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 {
     // 通信画面を閉じる
     // 即座に閉じたいのでアニメーションは行わない
-//    [self dismissModalViewControllerAnimated:NO];
-    [self dismissViewControllerAnimated:NO completion:nil]; //7
+    [self dismissViewControllerAnimated:NO completion:^{ }];
 }
 
 // データ取得失敗時に呼ばれるメソッド
@@ -128,8 +120,7 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
     
     // 通信画面を閉じる
     // 即座に閉じたいのでアニメーションは行わない
-//    [self dismissModalViewControllerAnimated:NO];
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:NO completion:^{ }];
 }
 
 // レスポンスを受け取った直後に呼ばれるメソッド
@@ -202,8 +193,7 @@ didReceiveResponse:(NSURLResponse *)response
     [self.connection cancel];
     
     // 通信画面を閉じる
-//    [self dismissModalViewControllerAnimated:NO];
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:NO completion:^{ }];
 }
 
 @end
