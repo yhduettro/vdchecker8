@@ -25,12 +25,12 @@ function connectToDB()
 		mysql_set_charset('utf-8');
         
         // 成功メッセージを表示する
-        echo "dbが繋がりました。";
+//        echo "dbが繋がりました。";
 	}
     else
     {
         // エラーメッセージを表示する
-        echo "dbが綱からないです。";
+//        echo "dbが綱からないです。";
     }
 	
 	return $db;

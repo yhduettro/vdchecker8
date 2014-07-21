@@ -47,6 +47,16 @@ static NSString *kIDKey = @"ID";
     [super viewDidLoad];
 }
 
+// ビューが表示される直前に呼ばれるメソッド
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    UINavigationBar *naviBar = [self.navigationController navigationBar];
+    UIImage *img = [UIImage imageNamed:@"topbar_List.png"];
+    [naviBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+}
+
 // ビューが表示された直後の処理
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -82,7 +92,7 @@ static NSString *kIDKey = @"ID";
         [vc setUrlRequest:req];
 
 //        [self presentViewController:vc animated:NO completion:nil];
-        [self presentViewController:vc animated:NO completion:^{ }];
+        [self presentViewController:vc animated:NO completion:^{
 
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
@@ -90,6 +100,7 @@ static NSString *kIDKey = @"ID";
 //        {
             [self setConnectionViewController:vc];
 //        }
+        }];
 
     }
 }
@@ -198,9 +209,9 @@ static NSString *kIDKey = @"ID";
 
 
 // ビューが表示される直前に呼ばれるメソッド
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
     
 //    // 「+」ボタンを作成する
 //    // ボタンが押されたら「add:」メソッドを呼び出すようにする
@@ -214,7 +225,7 @@ static NSString *kIDKey = @"ID";
 //    [self.navigationItem setRightBarButtonItem:button];
     
 //    [button release];
-}
+//}
 
 // ビューが非表示になる直前に呼ばれるメソッド
 - (void)viewWillDisappear:(BOOL)animated

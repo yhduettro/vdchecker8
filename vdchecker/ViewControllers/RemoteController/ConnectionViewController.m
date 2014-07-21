@@ -89,7 +89,7 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 
 // データ取得完了時に呼ばれるメソッド
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
+{   //DidFinishLoading
     // 通信画面を閉じる
     // 即座に閉じたいのでアニメーションは行わない
     [self dismissViewControllerAnimated:NO completion:^{ }];
@@ -98,7 +98,7 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 // データ取得失敗時に呼ばれるメソッド
 - (void)connection:(NSURLConnection *)connection
   didFailWithError:(NSError *)error
-{
+{   //didFailWithError
     // エラーメッセージを表示する
     UIAlertView *alert;
     NSString *errMsg = @"Error occurred. ";
@@ -126,7 +126,7 @@ static NSString *HTTPErrorDomain = @"HTTPErrorDomain";
 // レスポンスを受け取った直後に呼ばれるメソッド
 - (void)connection:(NSURLConnection *)connection
 didReceiveResponse:(NSURLResponse *)response
-{
+{   //didReceiveResponse
     // レスポンスを記憶する
     [self setResponse:response];    //5
     
@@ -171,7 +171,7 @@ didReceiveResponse:(NSURLResponse *)response
 // データ受信時に呼ばれるメソッド
 - (void)connection:(NSURLConnection *)connection
     didReceiveData:(NSData *)data
-{
+{   //didReceiveData
     // 格納先のバッファを確保する
     NSMutableData *downloadedData = self.downloadedData;    //6
     

@@ -66,6 +66,10 @@
 {
     [super viewWillAppear:animated];
     
+    UINavigationBar *naviBar = [self.navigationController navigationBar];
+    UIImage *img = [UIImage imageNamed:@"topbar_Edit.png"];
+    [naviBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    
     // ナビゲーションバーに「Save」ボタンを追加する
     // ボタンが押されたときは、「save:」メソッドを呼び出すようにする
 //    UIBarButtonItem *button;
@@ -88,6 +92,7 @@
         [self.deleteButton setHidden:YES];
     }
 }
+
 
 // ビューが表示された直後の処理
 - (void)viewDidAppear:(BOOL)animated
@@ -190,7 +195,7 @@
                                                         bundle:nil];
         [vc setUrlRequest:req];
         
-        [self presentViewController:vc animated:NO completion:^{ }];
+        [self presentViewController:vc animated:NO completion:^{
 
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
         // ということなので、プロパティにセットしない
@@ -200,6 +205,7 @@
 //        }
         
 //        [vc release];
+        }];
     }
 }
 
@@ -251,13 +257,13 @@
         // スペースを「+」に置き換える
         NSString *key1 = [key stringByReplacingOccurrencesOfString:@" " withString:@"+"];
         
-        NSString *key2;
-        [key2 copy:(id)key1];
+        NSString *key2 = [NSString stringWithString:key1];
+//        [key2 copy:(id)key1];
         
         value = [value stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
         // URLエンコードを行う
-        key1 = [key2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *key3 = [key2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 //        [key2 copy:(id)key1];
     
         value = [value stringByAddingPercentEscapesUsingEncoding:
@@ -269,7 +275,7 @@
             [str appendString:@"&"];
         }
         
-        [str appendFormat:@"%@=%@", key1, value];
+        [str appendFormat:@"%@=%@", key3, value];
     }
     
     // 作成した文字列をUTF-8で符号化する
@@ -341,10 +347,7 @@
                                                     bundle:nil];
     [vc setUrlRequest:req];
 
-    [self presentViewController:vc animated:NO completion:^{
-    
-        [self.navigationController popViewControllerAnimated:NO];
-    }];
+    [self presentViewController:vc animated:NO completion:^{ }];
 }
 
 @end
