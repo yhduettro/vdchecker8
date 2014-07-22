@@ -37,21 +37,21 @@ function connectToDB()
 }
 
 // 情報を登録する関数
-function insertNewInfo($url, $title)
+function insertNewInfo($url, $title, $contents)
 {
 	// 内容を取得する
-	$contents = file_get_contents($url);
+//	$contents = file_get_contents($url);
 	if ($contents == null)
     {
         // 内容を取得できませんでした。
-        echo "DBに登録しませんでした。";
+//        echo "DBに登録しませんでした。";
         
         return false;
     }
     else
     {
         // 内容を取得しました。
-        echo "DBに登録しました。";
+//        echo "DBに登録しました。";
     }
     
 	// HTMLタグを削除する
@@ -77,12 +77,12 @@ function insertNewInfo($url, $title)
 		mysql_close($db);
         
         // 成功メッセージを表示する
-        echo "DBに登録しました。";
+//        echo "DBに登録しました。";
     }
     else
     {
         // エラーメッセージを表示する
-        echo "DBに登録しませんでした。";
+//        echo "DBに登録しませんでした。";
     }
 	
 	return $ret;
@@ -90,7 +90,7 @@ function insertNewInfo($url, $title)
 
 // 情報を更新する関数
 // 更新しない値は「null」を指定する
-function updateInfo($id, $newURL, $newTitle)
+function updateInfo($id, $newURL, $newTitle, $newContents)
 {
 	if ($newURL == null &&
 		$newTitle == null)
@@ -108,7 +108,8 @@ function updateInfo($id, $newURL, $newTitle)
 		// DBに登録するために、エスケープ処理を行う
 		$url = addslashes($newURL);
 		$title = addslashes($newTitle);
-		$contents = null;
+        $contents = addslashes($newContents);
+//		$contents = null;
 		
 		// DBを更新する
 		$isFirst = true;
@@ -119,7 +120,7 @@ function updateInfo($id, $newURL, $newTitle)
 			$isFirst = false;
 			
 			// 新しいURLから内容を取得する
-			$contents = file_get_contents($newURL);
+//			$contents = file_get_contents($newURL);
 			
 			if ($contents)
 			{

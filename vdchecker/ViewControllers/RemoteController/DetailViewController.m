@@ -193,8 +193,9 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"showEditView"]) {
         EditViewController *editVC = [segue destinationViewController];
-        editVC.recordTitle = self.titleLabel.text;
         editVC.urlString = self.urlLabel.text;
+        editVC.recordTitle = self.titleLabel.text;
+        editVC.contentTextString = self.contentTextView.text;
         editVC.recordID = self.recordID;
     }
 }

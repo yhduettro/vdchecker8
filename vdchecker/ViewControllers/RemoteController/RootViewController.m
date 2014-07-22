@@ -91,7 +91,6 @@ static NSString *kIDKey = @"ID";
                                                         bundle:nil];
         [vc setUrlRequest:req];
 
-//        [self presentViewController:vc animated:NO completion:nil];
         [self presentViewController:vc animated:NO completion:^{
 
         // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
@@ -251,6 +250,9 @@ static NSString *kIDKey = @"ID";
     if ([[segue identifier] isEqualToString:@"showDetailView"]) {
         DetailViewController *detailVC = [segue destinationViewController];
         detailVC.recordID = recordID;
+    } else if ([[segue identifier] isEqualToString:@"addSegue"]){
+        DetailViewController *detailVC = [segue destinationViewController];
+        detailVC.recordID = nil;
     }
 }
 

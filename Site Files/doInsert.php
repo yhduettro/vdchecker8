@@ -11,8 +11,13 @@ $url = $_POST['URL'];
 $title = null;
 if (isset($_POST['title']))
 $title = $_POST['title'];
+    
+// 内容を取得する
+$contents = null;
+if (isset($_POST['contents']))
+$contents = $_POST['contents'];
 
-if ($url == null || $title == null)
+if ($url == null || $title == null || $contents == null)
 {
 	// 必要なパラメータが足りない
 	print "0";
@@ -20,7 +25,7 @@ if ($url == null || $title == null)
 }
 
 // 登録用の関数を実行する
-if (insertNewInfo($url, $title))
+if (insertNewInfo($url, $title, $contents))
 print "1";  // 成功
 else
 print "0";  // 失敗

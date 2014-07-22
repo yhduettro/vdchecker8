@@ -40,11 +40,14 @@
 // プロパティの定義
 @property (retain, nonatomic) IBOutlet UITextField *urlTextField;
 @property (retain, nonatomic) IBOutlet UITextField *titleTextField;
+@property (retain, nonatomic) IBOutlet UITextView *contentTextView;
 @property (retain, nonatomic) NSString *urlString;
 @property (retain, nonatomic) NSString *recordTitle;
+@property (retain, nonatomic) NSString *contentTextString;
 @property (retain, nonatomic) NSString *recordID;
 @property (retain, nonatomic)
 ConnectionViewController *connectionViewController;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (retain, nonatomic) IBOutlet UIButton *deleteButton;
 
 // 「Save」ボタンが押されたときの処理

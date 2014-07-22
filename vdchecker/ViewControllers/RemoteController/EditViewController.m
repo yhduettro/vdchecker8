@@ -58,6 +58,8 @@
         [self.urlTextField setText:self.urlString];
     if (self.recordTitle)
         [self.titleTextField setText:self.recordTitle];
+    if (self.contentTextString)
+        [self.contentTextView setText:self.contentTextString];
 }
 
 
@@ -73,14 +75,9 @@
     // ナビゲーションバーに「Save」ボタンを追加する
     // ボタンが押されたときは、「save:」メソッドを呼び出すようにする
 //    UIBarButtonItem *button;
-//    SEL sel = @selector(save:);
-//    
-//    button = [[UIBarButtonItem alloc]
-//              initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-//              target:self
-//              action:sel];
-//    [self.navigationItem setRightBarButtonItem:button];
-//    [button release];
+    SEL sel = @selector(save:);
+    self.saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:sel];
+    [self.navigationItem setRightBarButtonItem:self.saveButton];
     
     // 登録情報編集機能のときだけ、「Delete」ボタンを表示する
     if ([self.recordID length] > 0)
@@ -145,6 +142,7 @@
     // 入力されたURLとタイトルを取得する
     NSString *urlStr = self.urlTextField.text;
     NSString *titleStr = self.titleTextField.text;
+    NSString *contentStr = self.contentTextView.text;
     
     // URLとタイトルが入力されていなければ何もしない
     if ([urlStr length] > 0 &&
@@ -179,6 +177,7 @@
         dict = [NSMutableDictionary dictionaryWithCapacity:0];
         [dict setObject:urlStr forKey:@"URL"];
         [dict setObject:titleStr forKey:@"title"];
+        [dict setObject:contentStr forKey:@"contents"];
         
         if ([recordID length] > 0)
             [dict setObject:recordID forKey:@"ID"];
@@ -232,7 +231,7 @@
         // 「1」が取得できていたら成功
         if ([text integerValue] == 1)
         {
-            ret = YES;
+            ret = YES;  //成功
         }
     }
     
@@ -258,13 +257,11 @@
         NSString *key1 = [key stringByReplacingOccurrencesOfString:@" " withString:@"+"];
         
         NSString *key2 = [NSString stringWithString:key1];
-//        [key2 copy:(id)key1];
         
         value = [value stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
         // URLエンコードを行う
         NSString *key3 = [key2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//        [key2 copy:(id)key1];
     
         value = [value stringByAddingPercentEscapesUsingEncoding:
                  NSUTF8StringEncoding];
