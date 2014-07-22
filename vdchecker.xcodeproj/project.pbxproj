@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		F10213E2197E40100032BF13 /* doSetImage.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E1197E40100032BF13 /* doSetImage.php */; };
+		F10213E4197E49E60032BF13 /* doViewImage.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E3197E49E60032BF13 /* doViewImage.php */; };
 		F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1985F921972235600277585 /* PageScrap.php */; };
 		F12C33281974E06900C48B75 /* doDelete.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
 		F12C33291974E06900C48B75 /* doGetDetail.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
@@ -175,6 +177,7 @@
 			dstSubfolderSpec = 0;
 			files = (
 				F12C33301974E5D800C48B75 /* doDelete.php in CopyFiles */,
+				F10213E2197E40100032BF13 /* doSetImage.php in CopyFiles */,
 				F12C33391975785400C48B75 /* sampleHTMLFile.html in CopyFiles */,
 				F12C33311974E5D800C48B75 /* doGetDetail.php in CopyFiles */,
 				F12C33321974E5D800C48B75 /* doInsert.php in CopyFiles */,
@@ -183,6 +186,7 @@
 				F12C33351974E5D800C48B75 /* index.php in CopyFiles */,
 				F12C33361974E5D800C48B75 /* RegisterTestData.php in CopyFiles */,
 				F12C33371974E5D800C48B75 /* ShowInfo.php in CopyFiles */,
+				F10213E4197E49E60032BF13 /* doViewImage.php in CopyFiles */,
 				F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +194,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F10213E1197E40100032BF13 /* doSetImage.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage.php; path = "Site Files/doSetImage.php"; sourceTree = SOURCE_ROOT; };
+		F10213E3197E49E60032BF13 /* doViewImage.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doViewImage.php; path = "Site Files/doViewImage.php"; sourceTree = SOURCE_ROOT; };
 		F12C33201974E06900C48B75 /* doDelete.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doDelete.php; path = "Site Files/doDelete.php"; sourceTree = SOURCE_ROOT; };
 		F12C33211974E06900C48B75 /* doGetDetail.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doGetDetail.php; path = "Site Files/doGetDetail.php"; sourceTree = SOURCE_ROOT; };
 		F12C33221974E06900C48B75 /* doInsert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doInsert.php; path = "Site Files/doInsert.php"; sourceTree = SOURCE_ROOT; };
@@ -619,6 +625,8 @@
 		F1985F911972234300277585 /* Site Files */ = {
 			isa = PBXGroup;
 			children = (
+				F10213E3197E49E60032BF13 /* doViewImage.php */,
+				F10213E1197E40100032BF13 /* doSetImage.php */,
 				F12C33201974E06900C48B75 /* doDelete.php */,
 				F12C33211974E06900C48B75 /* doGetDetail.php */,
 				F12C33221974E06900C48B75 /* doInsert.php */,

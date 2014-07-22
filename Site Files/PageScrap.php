@@ -8,12 +8,15 @@
 // ここでは、簡略化でこのファイルに記述している。 ---
 function connectToDB()
 {
+    //データベースに接続する変数名を宣言しておく
+//	$server = "localhost";  // MySQLサーバを実行しているサーバアドレス
 //	$userName = "root"; // MySQLサーバの管理者名
 //	$password = "test"; // MySQLサーバの管理者パスワード
-//	$server = "localhost";  // MySQLサーバを実行しているサーバアドレス
+
+    $server = "sql106.lancershost.com";  // MySQLサーバを実行しているサーバアドレス
     $userName = "lans_15097304"; // MySQLサーバの管理者名
     $password = "8088909"; // MySQLサーバの管理者パスワード
-    $server = "sql106.lancershost.com";  // MySQLサーバを実行しているサーバアドレス
+
 	$db = mysql_connect($server, $userName, $password);
 	
 	if ($db != false)
@@ -25,12 +28,12 @@ function connectToDB()
 		mysql_set_charset('utf-8');
         
         // 成功メッセージを表示する
-//        echo "dbが繋がりました。";
+//        echo "dbが繋がりました"; //(Debug Mode only)
 	}
     else
     {
         // エラーメッセージを表示する
-//        echo "dbが綱からないです。";
+//        echo "dbが綱からないです"; //(Debug Mode only)
     }
 	
 	return $db;
@@ -40,18 +43,18 @@ function connectToDB()
 function insertNewInfo($url, $title, $contents)
 {
 	// 内容を取得する
-//	$contents = file_get_contents($url);
+//	$contents = file_get_contents($url); //link->HTML Page用
 	if ($contents == null)
     {
         // 内容を取得できませんでした。
-//        echo "DBに登録しませんでした。";
+//        echo "DBに登録しませんでした。"; //(Debug Mode only)
         
         return false;
     }
     else
     {
         // 内容を取得しました。
-//        echo "DBに登録しました。";
+//        echo "DBに登録しました。"; //(Debug Mode only)
     }
     
 	// HTMLタグを削除する
@@ -77,12 +80,12 @@ function insertNewInfo($url, $title, $contents)
 		mysql_close($db);
         
         // 成功メッセージを表示する
-//        echo "DBに登録しました。";
+//        echo "DBに登録しました。"; //(Debug Mode only)
     }
     else
     {
         // エラーメッセージを表示する
-//        echo "DBに登録しませんでした。";
+//        echo "DBに登録しませんでした。"; //(Debug Mode only)
     }
 	
 	return $ret;
@@ -109,7 +112,6 @@ function updateInfo($id, $newURL, $newTitle, $newContents)
 		$url = addslashes($newURL);
 		$title = addslashes($newTitle);
         $contents = addslashes($newContents);
-//		$contents = null;
 		
 		// DBを更新する
 		$isFirst = true;
@@ -120,7 +122,7 @@ function updateInfo($id, $newURL, $newTitle, $newContents)
 			$isFirst = false;
 			
 			// 新しいURLから内容を取得する
-//			$contents = file_get_contents($newURL);
+//			$contents = file_get_contents($newURL); //link->HTML Page用
 			
 			if ($contents)
 			{
