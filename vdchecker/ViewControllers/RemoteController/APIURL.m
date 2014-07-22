@@ -15,18 +15,29 @@ static NSString *kDoGetDetail = @"doGetDetail.php";
 // 他のメソッドが使用する共通メソッド
 + (NSURL *)URLWithAPIPath:(NSString *)apiPath
 {
-    // サーバのURLを作成する
-    NSUserDefaults *userDefaults =
-	[NSUserDefaults standardUserDefaults];
+    // Root.plistまでのパスを取得
+    NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
+    NSString *settingsBundlePath = [bundlePath stringByAppendingPathComponent:@"Settings.bundle"];
+    NSString *rootPlistPath = [settingsBundlePath stringByAppendingPathComponent:@"Root.plist"];
 
-    [userDefaults setObject:@"http://quiz.lancershost.com" forKey:kServerURL];
-
-    NSString *str = [userDefaults stringForKey:kServerURL];
-//    NSString *str = @"http://quiz.lancershost.com";
-
-//    NSURL *serverURL = [NSURL URLWithString:str];   //2
-    NSURL *serverURL = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    // Root.plistの中身を辞書として読み込む
+    NSDictionary *settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:rootPlistPath];
     
+    // 設定値の配列を取得する
+    NSArray *preferenceSpecifiers = [settingsDictionary objectForKey:@"PreferenceSpecifiers"];
+
+    NSString *str;
+//    for (NSDictionary *preferenceItem in preferenceSpecifiers) {
+//        //設定値を読み込む処理
+////        NSLog(@"preferenceItem = %@", preferenceItem);
+//        str = (NSString *)[preferenceItem objectForKey:@"DefaultValue"];
+//    }
+    NSDictionary *preferenceItem = preferenceSpecifiers[1];
+    str = (NSString *)[preferenceItem objectForKey:@"DefaultValue"];
+
+    // サーバのURLを作成する
+    NSURL *serverURL = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+
     // APIのパスを使って相対URLを作成する
     NSURL *resultURL;
     resultURL = [NSURL URLWithString:apiPath
