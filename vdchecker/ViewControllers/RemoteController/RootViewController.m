@@ -53,8 +53,9 @@ static NSString *kIDKey = @"ID";
     [super viewWillAppear:animated];
     
     UINavigationBar *naviBar = [self.navigationController navigationBar];
-    UIImage *img = [UIImage imageNamed:@"topbar_List.png"];
+    UIImage *img = [UIImage imageNamed:@"topbar_expert.png"];
     [naviBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    naviBar.hidden = NO;
 }
 
 // ビューが表示された直後の処理

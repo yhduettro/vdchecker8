@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *buttonCheckStart;
 @property (weak, nonatomic) IBOutlet UIButton *buttonIllList;
+@property (weak, nonatomic) IBOutlet UIButton *buttonToExpert;
 
 @property NSUInteger pageIndex;
 @property NSString *titleText;

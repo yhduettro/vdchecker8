@@ -33,6 +33,10 @@
 		F10213F0198100EA0032BF13 /* doSetImage2.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213EE198100CD0032BF13 /* doSetImage2.php */; };
 		F10213F2198102000032BF13 /* doSetImage4.php in Resources */ = {isa = PBXBuildFile; fileRef = F10213F1198102000032BF13 /* doSetImage4.php */; };
 		F10213F3198105DE0032BF13 /* doSetImage4.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213F1198102000032BF13 /* doSetImage4.php */; };
+		F10213F9198111B00032BF13 /* town.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F10213F8198111B00032BF13 /* town.jpg */; };
+		F10213FC198112CA0032BF13 /* ImageUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10213FB198112CA0032BF13 /* ImageUploadViewController.m */; };
+		F10213FE19811EF30032BF13 /* topbar_expert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F10213FD19811EF30032BF13 /* topbar_expert@2x.png */; };
+		F1021400198121370032BF13 /* topbar_ImageUpload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */; };
 		F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1985F921972235600277585 /* PageScrap.php */; };
 		F12C33281974E06900C48B75 /* doDelete.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
 		F12C33291974E06900C48B75 /* doGetDetail.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
@@ -159,7 +163,6 @@
 		F19FE0A819776C3800144E16 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19FE0A719776C3800144E16 /* FirstViewController.m */; };
 		F1A3FB3A197CEAC400D06ED3 /* topbar_Detail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A3FB37197CEAC400D06ED3 /* topbar_Detail@2x.png */; };
 		F1A3FB3B197CEAC400D06ED3 /* topbar_Edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A3FB38197CEAC400D06ED3 /* topbar_Edit@2x.png */; };
-		F1A3FB3C197CEAC400D06ED3 /* topbar_List@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A3FB39197CEAC400D06ED3 /* topbar_List@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +219,11 @@
 		F10213E71980CA340032BF13 /* doSetImage3.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage3.php; path = "Site Files/doSetImage3.php"; sourceTree = SOURCE_ROOT; };
 		F10213EE198100CD0032BF13 /* doSetImage2.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage2.php; path = "Site Files/doSetImage2.php"; sourceTree = SOURCE_ROOT; };
 		F10213F1198102000032BF13 /* doSetImage4.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage4.php; path = "Site Files/doSetImage4.php"; sourceTree = SOURCE_ROOT; };
+		F10213F8198111B00032BF13 /* town.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = town.jpg; path = Images/town.jpg; sourceTree = "<group>"; };
+		F10213FA198112CA0032BF13 /* ImageUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageUploadViewController.h; path = ViewControllers/RemoteController/ImageUploadViewController.h; sourceTree = "<group>"; };
+		F10213FB198112CA0032BF13 /* ImageUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUploadViewController.m; path = ViewControllers/RemoteController/ImageUploadViewController.m; sourceTree = "<group>"; };
+		F10213FD19811EF30032BF13 /* topbar_expert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_expert@2x.png"; path = "Images/topbars/topbar_expert@2x.png"; sourceTree = "<group>"; };
+		F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_ImageUpload@2x.png"; path = "Images/topbars/topbar_ImageUpload@2x.png"; sourceTree = "<group>"; };
 		F12C33201974E06900C48B75 /* doDelete.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doDelete.php; path = "Site Files/doDelete.php"; sourceTree = SOURCE_ROOT; };
 		F12C33211974E06900C48B75 /* doGetDetail.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doGetDetail.php; path = "Site Files/doGetDetail.php"; sourceTree = SOURCE_ROOT; };
 		F12C33221974E06900C48B75 /* doInsert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doInsert.php; path = "Site Files/doInsert.php"; sourceTree = SOURCE_ROOT; };
@@ -357,7 +365,6 @@
 		F19FE0A719776C3800144E16 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
 		F1A3FB37197CEAC400D06ED3 /* topbar_Detail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_Detail@2x.png"; path = "Images/topbars/topbar_Detail@2x.png"; sourceTree = "<group>"; };
 		F1A3FB38197CEAC400D06ED3 /* topbar_Edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_Edit@2x.png"; path = "Images/topbars/topbar_Edit@2x.png"; sourceTree = "<group>"; };
-		F1A3FB39197CEAC400D06ED3 /* topbar_List@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_List@2x.png"; path = "Images/topbars/topbar_List@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +394,8 @@
 		F12C333C197677E600C48B75 /* RemoteController */ = {
 			isa = PBXGroup;
 			children = (
+				F10213FA198112CA0032BF13 /* ImageUploadViewController.h */,
+				F10213FB198112CA0032BF13 /* ImageUploadViewController.m */,
 				F12C333D1976784D00C48B75 /* APIURL.h */,
 				F12C333E1976784D00C48B75 /* APIURL.m */,
 				F12C333F1976784D00C48B75 /* ConnectionViewController.h */,
@@ -421,6 +430,7 @@
 		F138A0AF19734E050022F7DE /* Images Files */ = {
 			isa = PBXGroup;
 			children = (
+				F10213F8198111B00032BF13 /* town.jpg */,
 				F138A16419737F610022F7DE /* LaunchImage.png */,
 				F138A16619737FDF0022F7DE /* icons */,
 				F138A115197366540022F7DE /* topbars */,
@@ -526,9 +536,10 @@
 		F138A115197366540022F7DE /* topbars */ = {
 			isa = PBXGroup;
 			children = (
+				F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */,
+				F10213FD19811EF30032BF13 /* topbar_expert@2x.png */,
 				F1A3FB37197CEAC400D06ED3 /* topbar_Detail@2x.png */,
 				F1A3FB38197CEAC400D06ED3 /* topbar_Edit@2x.png */,
-				F1A3FB39197CEAC400D06ED3 /* topbar_List@2x.png */,
 				F138A152197371AB0022F7DE /* topbar_about@2x.png */,
 				F138A1161973666B0022F7DE /* topbar_check_1@2x.png */,
 				F138A1171973666B0022F7DE /* topbar_check_2@2x.png */,
@@ -764,7 +775,6 @@
 				F138A18019737FF30022F7DE /* pluslife@2x.png in Resources */,
 				F138A17B19737FF30022F7DE /* pluslife-Small-50.png in Resources */,
 				F138A13719736D700022F7DE /* topbar_kekka_3@2x.png in Resources */,
-				F1A3FB3C197CEAC400D06ED3 /* topbar_List@2x.png in Resources */,
 				F138A13E19736EAB0022F7DE /* botan_11.png in Resources */,
 				F138A107197364340022F7DE /* Section_Woman@2x.png in Resources */,
 				F138A109197365040022F7DE /* kakka_1.png in Resources */,
@@ -795,12 +805,15 @@
 				F138A153197371AB0022F7DE /* topbar_about@2x.png in Resources */,
 				F12C332A1974E06900C48B75 /* doInsert.php in Resources */,
 				F1985F751972231500277585 /* Images.xcassets in Resources */,
+				F10213FE19811EF30032BF13 /* topbar_expert@2x.png in Resources */,
+				F10213F9198111B00032BF13 /* town.jpg in Resources */,
 				F1A3FB3B197CEAC400D06ED3 /* topbar_Edit@2x.png in Resources */,
 				F138A10319735FA90022F7DE /* waki.png in Resources */,
 				F138A0FC19735FA90022F7DE /* hara.png in Resources */,
 				F138A106197364340022F7DE /* Section_Man@2x.png in Resources */,
 				F10213EA1980CA340032BF13 /* doSetImage3.php in Resources */,
 				F138A13819736D700022F7DE /* topbar_kekka_4@2x.png in Resources */,
+				F1021400198121370032BF13 /* topbar_ImageUpload@2x.png in Resources */,
 				F138A14119736EAB0022F7DE /* botan_14.png in Resources */,
 				F12C332D1974E06900C48B75 /* index.php in Resources */,
 				F138A17D19737FF30022F7DE /* pluslife-Small.png in Resources */,
@@ -881,6 +894,7 @@
 				F1985F731972231500277585 /* PLViewController.m in Sources */,
 				F1985F661972231500277585 /* main.m in Sources */,
 				F138A0E719735D510022F7DE /* GaiyouTableViewController.m in Sources */,
+				F10213FC198112CA0032BF13 /* ImageUploadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

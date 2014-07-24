@@ -28,7 +28,6 @@
     UINavigationBar *naviBar = [self.navigationController navigationBar];
     UIImage *img = [UIImage imageNamed:@"topbar_check_1.png"];
     [naviBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-//    naviBar.backgroundColor = [UIColor clearColor];
     naviBar.hidden = NO;
 }
 

@@ -38,12 +38,12 @@
         
         self.buttonCheckStart.hidden = NO;
         self.buttonIllList.hidden = NO;
-
+        self.buttonToExpert.hidden = NO;
     } else {
 
         self.buttonCheckStart.hidden = YES;
         self.buttonIllList.hidden = YES;
-
+        self.buttonToExpert.hidden = YES;
     }
     // Do any additional setup after loading the view.
     UINavigationBar *naviBar = [self.navigationController navigationBar];
