@@ -17,7 +17,7 @@ function connectToDB()
     $userName = "lans_15097304"; // MySQLサーバの管理者名
     $password = "8088909"; // MySQLサーバの管理者パスワード
 
-	$db = mysql_connect($server, $userName, $password);
+	$db = mysql_connect($server, $userName, $password) or die("SQL 서버에 접속할 수 없습니다.");;
 	
 	if ($db != false)
 	{
@@ -246,5 +246,41 @@ function getInfo($id)
 		mysql_close($db);
 	}
 	return $ret;
+}
+    
+function insertNewImage($img_src)
+{
+    
+    $ret = false;
+
+    If($img_src) {
+        
+        // DBに接続する
+        $db = connectToDB();
+        
+        $PSize = filesize($img_src);
+        $imgbinary = fread(fopen($img_src, "r"), $PSize); // バイナリデータを読み込み
+        $img_str = base64_encode($imgbinary); // base64エンコード
+        echo '<img src="data:image/png;base64,'.$img_str.'" />'; // imgタグで出力
+        
+        $mysqlPicture = addslashes($imgbinary);
+        
+        if ($db)
+        {
+            // DBに登録する
+            $q = "INSERT INTO ImgFileTable (img_col)" . " VALUES ('$mysqlPicture')";
+            $ret = mysql_query($q) or die("쿼리를 수행할 수 없습니다.");
+            
+            // 成功メッセージを表示する
+            echo "DBに登録しました。"; //(Debug Mode only)
+            // DBから切断する
+            mysql_close($db);
+        }
+    }
+    else
+    {
+        echo "어떤 그림도 업로드하지 않으셨습니다.";
+    }
+    return $ret;
 }
 ?>

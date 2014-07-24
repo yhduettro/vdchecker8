@@ -23,6 +23,16 @@
 /* Begin PBXBuildFile section */
 		F10213E2197E40100032BF13 /* doSetImage.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E1197E40100032BF13 /* doSetImage.php */; };
 		F10213E4197E49E60032BF13 /* doViewImage.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E3197E49E60032BF13 /* doViewImage.php */; };
+		F10213E81980CA340032BF13 /* doSetImage1.php in Resources */ = {isa = PBXBuildFile; fileRef = F10213E51980CA340032BF13 /* doSetImage1.php */; };
+		F10213E91980CA340032BF13 /* doSetImage2.html in Resources */ = {isa = PBXBuildFile; fileRef = F10213E61980CA340032BF13 /* doSetImage2.html */; };
+		F10213EA1980CA340032BF13 /* doSetImage3.php in Resources */ = {isa = PBXBuildFile; fileRef = F10213E71980CA340032BF13 /* doSetImage3.php */; };
+		F10213EB1980CC450032BF13 /* doSetImage1.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E51980CA340032BF13 /* doSetImage1.php */; };
+		F10213EC1980CC450032BF13 /* doSetImage2.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E61980CA340032BF13 /* doSetImage2.html */; };
+		F10213ED1980CC450032BF13 /* doSetImage3.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213E71980CA340032BF13 /* doSetImage3.php */; };
+		F10213EF198100CD0032BF13 /* doSetImage2.php in Resources */ = {isa = PBXBuildFile; fileRef = F10213EE198100CD0032BF13 /* doSetImage2.php */; };
+		F10213F0198100EA0032BF13 /* doSetImage2.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213EE198100CD0032BF13 /* doSetImage2.php */; };
+		F10213F2198102000032BF13 /* doSetImage4.php in Resources */ = {isa = PBXBuildFile; fileRef = F10213F1198102000032BF13 /* doSetImage4.php */; };
+		F10213F3198105DE0032BF13 /* doSetImage4.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F10213F1198102000032BF13 /* doSetImage4.php */; };
 		F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1985F921972235600277585 /* PageScrap.php */; };
 		F12C33281974E06900C48B75 /* doDelete.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
 		F12C33291974E06900C48B75 /* doGetDetail.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
@@ -176,6 +186,11 @@
 			dstPath = /Users/JGO/Documents/Lancershost/quiz;
 			dstSubfolderSpec = 0;
 			files = (
+				F10213F3198105DE0032BF13 /* doSetImage4.php in CopyFiles */,
+				F10213F0198100EA0032BF13 /* doSetImage2.php in CopyFiles */,
+				F10213EB1980CC450032BF13 /* doSetImage1.php in CopyFiles */,
+				F10213EC1980CC450032BF13 /* doSetImage2.html in CopyFiles */,
+				F10213ED1980CC450032BF13 /* doSetImage3.php in CopyFiles */,
 				F12C33301974E5D800C48B75 /* doDelete.php in CopyFiles */,
 				F10213E2197E40100032BF13 /* doSetImage.php in CopyFiles */,
 				F12C33391975785400C48B75 /* sampleHTMLFile.html in CopyFiles */,
@@ -196,6 +211,11 @@
 /* Begin PBXFileReference section */
 		F10213E1197E40100032BF13 /* doSetImage.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage.php; path = "Site Files/doSetImage.php"; sourceTree = SOURCE_ROOT; };
 		F10213E3197E49E60032BF13 /* doViewImage.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doViewImage.php; path = "Site Files/doViewImage.php"; sourceTree = SOURCE_ROOT; };
+		F10213E51980CA340032BF13 /* doSetImage1.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage1.php; path = "Site Files/doSetImage1.php"; sourceTree = SOURCE_ROOT; };
+		F10213E61980CA340032BF13 /* doSetImage2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = doSetImage2.html; path = "Site Files/doSetImage2.html"; sourceTree = SOURCE_ROOT; };
+		F10213E71980CA340032BF13 /* doSetImage3.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage3.php; path = "Site Files/doSetImage3.php"; sourceTree = SOURCE_ROOT; };
+		F10213EE198100CD0032BF13 /* doSetImage2.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage2.php; path = "Site Files/doSetImage2.php"; sourceTree = SOURCE_ROOT; };
+		F10213F1198102000032BF13 /* doSetImage4.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetImage4.php; path = "Site Files/doSetImage4.php"; sourceTree = SOURCE_ROOT; };
 		F12C33201974E06900C48B75 /* doDelete.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doDelete.php; path = "Site Files/doDelete.php"; sourceTree = SOURCE_ROOT; };
 		F12C33211974E06900C48B75 /* doGetDetail.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doGetDetail.php; path = "Site Files/doGetDetail.php"; sourceTree = SOURCE_ROOT; };
 		F12C33221974E06900C48B75 /* doInsert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doInsert.php; path = "Site Files/doInsert.php"; sourceTree = SOURCE_ROOT; };
@@ -625,8 +645,13 @@
 		F1985F911972234300277585 /* Site Files */ = {
 			isa = PBXGroup;
 			children = (
-				F10213E3197E49E60032BF13 /* doViewImage.php */,
 				F10213E1197E40100032BF13 /* doSetImage.php */,
+				F10213E51980CA340032BF13 /* doSetImage1.php */,
+				F10213E61980CA340032BF13 /* doSetImage2.html */,
+				F10213EE198100CD0032BF13 /* doSetImage2.php */,
+				F10213E71980CA340032BF13 /* doSetImage3.php */,
+				F10213F1198102000032BF13 /* doSetImage4.php */,
+				F10213E3197E49E60032BF13 /* doViewImage.php */,
 				F12C33201974E06900C48B75 /* doDelete.php */,
 				F12C33211974E06900C48B75 /* doGetDetail.php */,
 				F12C33221974E06900C48B75 /* doInsert.php */,
@@ -732,6 +757,7 @@
 				F138A10019735FA90022F7DE /* me.png in Resources */,
 				F138A112197366470022F7DE /* botan_3.png in Resources */,
 				F1985F701972231500277585 /* Main_iPad.storyboard in Resources */,
+				F10213E81980CA340032BF13 /* doSetImage1.php in Resources */,
 				F12C332C1974E06900C48B75 /* doUpdate.php in Resources */,
 				F138A17719737FF30022F7DE /* pluslife-76.png in Resources */,
 				F138A158197373400022F7DE /* ichiran@2x.png in Resources */,
@@ -742,6 +768,7 @@
 				F138A13E19736EAB0022F7DE /* botan_11.png in Resources */,
 				F138A107197364340022F7DE /* Section_Woman@2x.png in Resources */,
 				F138A109197365040022F7DE /* kakka_1.png in Resources */,
+				F10213F2198102000032BF13 /* doSetImage4.php in Resources */,
 				F138A13319736C790022F7DE /* image_3.png in Resources */,
 				F138A124197367CD0022F7DE /* botan_8.png in Resources */,
 				F138A1191973666B0022F7DE /* topbar_check_1@2x.png in Resources */,
@@ -763,6 +790,7 @@
 				F138A13219736C790022F7DE /* image_3-1.png in Resources */,
 				F138A14B19736F7B0022F7DE /* image_7.png in Resources */,
 				F138A13119736C790022F7DE /* image_2.png in Resources */,
+				F10213EF198100CD0032BF13 /* doSetImage2.php in Resources */,
 				F1A3FB3A197CEAC400D06ED3 /* topbar_Detail@2x.png in Resources */,
 				F138A153197371AB0022F7DE /* topbar_about@2x.png in Resources */,
 				F12C332A1974E06900C48B75 /* doInsert.php in Resources */,
@@ -771,10 +799,12 @@
 				F138A10319735FA90022F7DE /* waki.png in Resources */,
 				F138A0FC19735FA90022F7DE /* hara.png in Resources */,
 				F138A106197364340022F7DE /* Section_Man@2x.png in Resources */,
+				F10213EA1980CA340032BF13 /* doSetImage3.php in Resources */,
 				F138A13819736D700022F7DE /* topbar_kekka_4@2x.png in Resources */,
 				F138A14119736EAB0022F7DE /* botan_14.png in Resources */,
 				F12C332D1974E06900C48B75 /* index.php in Resources */,
 				F138A17D19737FF30022F7DE /* pluslife-Small.png in Resources */,
+				F10213E91980CA340032BF13 /* doSetImage2.html in Resources */,
 				F138A0FB19735FA90022F7DE /* atama.png in Resources */,
 				F138A17819737FF30022F7DE /* pluslife-76@2x.png in Resources */,
 				F138A14E197370930022F7DE /* about@2x.png in Resources */,

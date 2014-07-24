@@ -21,7 +21,7 @@
         $serch_query = mysqli_query($db,"SELECT * FROM `ImgFileTable` WHERE `ID` ='".$id_col_num."'");
         $row = mysqli_fetch_array($serch_query);
         
-        header( 'Content-Type: image/jpeg/png' );
+        header( 'Content-Type: image/x-png' );
         echo $row['img_col'];
         
 //        $close_flag = mysqli_close($db);

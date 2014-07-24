@@ -20,8 +20,8 @@ require_once "PageScrap.php";
 //insertNewInfo("http://www.quiz.lancershost.com/manual/glossary.html", "用語");
 //insertNewInfo("http://www.quiz.lancershost.com/manual/configuring.html", "設定ファイル");
 
-insertNewInfo("http://www.quiz.lancershost.com/manual/configuring.html", "設定ファイル");
-insertNewInfo("./sampleHTMLFile.html", "sampleHTMLファイル");
+insertNewInfo("http://www.quiz.lancershost.com/sampleHTMLFile.html", "設定ファイル", "nil");
+insertNewInfo("./sampleHTMLFile.html", "sampleHTMLファイル", "nil");
 
 // 完了メッセージを表示する
 echo "Registered test data.";
