@@ -9,6 +9,7 @@ static NSString *kDoUpdate = @"doUpdate.php";
 static NSString *kDoList = @"doList.php";
 static NSString *kDoDelete = @"doDelete.php";
 static NSString *kDoGetDetail = @"doGetDetail.php";
+static NSString *kDoUpdateImage = @"doSetImage4.php";
 
 @implementation NSURL (APIURL)
 
@@ -85,6 +86,11 @@ static NSString *kDoGetDetail = @"doGetDetail.php";
             kDoGetDetail, recordID];
     
     return [self URLWithAPIPath:path];
+}
+
++ (NSURL *)URLToDoUpdateImage
+{
+    return [self URLWithAPIPath:kDoUpdateImage];
 }
 
 @end

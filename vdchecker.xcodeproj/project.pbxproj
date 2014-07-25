@@ -37,6 +37,7 @@
 		F10213FC198112CA0032BF13 /* ImageUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10213FB198112CA0032BF13 /* ImageUploadViewController.m */; };
 		F10213FE19811EF30032BF13 /* topbar_expert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F10213FD19811EF30032BF13 /* topbar_expert@2x.png */; };
 		F1021400198121370032BF13 /* topbar_ImageUpload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */; };
+		F10214041981DB940032BF13 /* family.m4v in Resources */ = {isa = PBXBuildFile; fileRef = F10214031981DB940032BF13 /* family.m4v */; };
 		F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1985F921972235600277585 /* PageScrap.php */; };
 		F12C33281974E06900C48B75 /* doDelete.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
 		F12C33291974E06900C48B75 /* doGetDetail.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
@@ -224,6 +225,7 @@
 		F10213FB198112CA0032BF13 /* ImageUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUploadViewController.m; path = ViewControllers/RemoteController/ImageUploadViewController.m; sourceTree = "<group>"; };
 		F10213FD19811EF30032BF13 /* topbar_expert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_expert@2x.png"; path = "Images/topbars/topbar_expert@2x.png"; sourceTree = "<group>"; };
 		F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_ImageUpload@2x.png"; path = "Images/topbars/topbar_ImageUpload@2x.png"; sourceTree = "<group>"; };
+		F10214031981DB940032BF13 /* family.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = family.m4v; path = Images/family.m4v; sourceTree = "<group>"; };
 		F12C33201974E06900C48B75 /* doDelete.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doDelete.php; path = "Site Files/doDelete.php"; sourceTree = SOURCE_ROOT; };
 		F12C33211974E06900C48B75 /* doGetDetail.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doGetDetail.php; path = "Site Files/doGetDetail.php"; sourceTree = SOURCE_ROOT; };
 		F12C33221974E06900C48B75 /* doInsert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doInsert.php; path = "Site Files/doInsert.php"; sourceTree = SOURCE_ROOT; };
@@ -430,6 +432,7 @@
 		F138A0AF19734E050022F7DE /* Images Files */ = {
 			isa = PBXGroup;
 			children = (
+				F10214031981DB940032BF13 /* family.m4v */,
 				F10213F8198111B00032BF13 /* town.jpg */,
 				F138A16419737F610022F7DE /* LaunchImage.png */,
 				F138A16619737FDF0022F7DE /* icons */,
@@ -793,6 +796,7 @@
 				F138A17A19737FF30022F7DE /* pluslife-Small-40@2x.png in Resources */,
 				F138A12B19736C630022F7DE /* botan_10.png in Resources */,
 				F138A17C19737FF30022F7DE /* pluslife-Small-50@2x.png in Resources */,
+				F10214041981DB940032BF13 /* family.m4v in Resources */,
 				F138A11A1973666B0022F7DE /* topbar_check_2@2x.png in Resources */,
 				F138A17619737FF30022F7DE /* pluslife-72@2x.png in Resources */,
 				F12C332E1974E06900C48B75 /* RegisterTestData.php in Resources */,

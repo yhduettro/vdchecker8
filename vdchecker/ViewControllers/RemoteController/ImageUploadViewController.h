@@ -1,5 +1,5 @@
 //
-//  EditViewController.h
+//  ImageUploadViewController.h
 //  vdchecker
 //
 //  Created by younghwan moon on 7/18/14.
@@ -17,14 +17,8 @@
     // URLを入力するテキストフィールド
     UITextField *_urlTextField;
     
-    // タイトルを入力するテキストフィールド
-    UITextField *_titleTextField;
-    
     // URL
     NSString    *_urlString;
-    
-    // タイトル
-    NSString    *_recordTitle;
     
     // レコードID
     // 新規登録のときは「nil」に設定する
@@ -38,20 +32,15 @@
 }
 
 // プロパティの定義
-@property (retain, nonatomic) IBOutlet UITextField *urlTextField;
-@property (retain, nonatomic) IBOutlet UITextField *titleTextField;
-@property (retain, nonatomic) IBOutlet UITextView *contentTextView;
 @property (retain, nonatomic) NSString *urlString;
-@property (retain, nonatomic) NSString *recordTitle;
-@property (retain, nonatomic) NSString *contentTextString;
+//@property (retain, nonatomic) NSString *recordTitle;
+@property (retain, nonatomic) IBOutlet UIImageView *aImageView;
+@property (retain, nonatomic) UIImage *aImage;
 @property (retain, nonatomic) NSString *recordID;
 @property (retain, nonatomic)
 ConnectionViewController *connectionViewController;
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *saveButton;
-@property (retain, nonatomic) IBOutlet UIButton *deleteButton;
-
-// 「Save」ボタンが押されたときの処理
-- (IBAction)save:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *loadImageButton;
+@property (retain, nonatomic) IBOutlet UIButton *deleteImageButton;
 
 // 受信したデータから成功したかどうかを判定する
 - (BOOL)checkSuccessWithReceivedData;

@@ -9,4 +9,6 @@
 + (NSURL *)URLToDoDelete;
 + (NSURL *)URLToGetDetail:(NSString *)recordID;
 
++ (NSURL *)URLToDoUpdateImage;
+
 @end
