@@ -38,6 +38,11 @@
 		F10213FE19811EF30032BF13 /* topbar_expert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F10213FD19811EF30032BF13 /* topbar_expert@2x.png */; };
 		F1021400198121370032BF13 /* topbar_ImageUpload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */; };
 		F10214041981DB940032BF13 /* family.m4v in Resources */ = {isa = PBXBuildFile; fileRef = F10214031981DB940032BF13 /* family.m4v */; };
+		F10214061981E26B0032BF13 /* zoo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F10214051981E26B0032BF13 /* zoo.mp4 */; };
+		F10214091981E97A0032BF13 /* VideoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10214081981E97A0032BF13 /* VideoUploadViewController.m */; };
+		F102140B1981ED180032BF13 /* doSetVideo.php in Resources */ = {isa = PBXBuildFile; fileRef = F102140A1981ED180032BF13 /* doSetVideo.php */; };
+		F102140C1981EE7B0032BF13 /* doSetVideo.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F102140A1981ED180032BF13 /* doSetVideo.php */; };
+		F102140E198203BE0032BF13 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = F102140D198203BE0032BF13 /* sample.m4v */; };
 		F12C331D1974C90D00C48B75 /* PageScrap.php in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1985F921972235600277585 /* PageScrap.php */; };
 		F12C33281974E06900C48B75 /* doDelete.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33201974E06900C48B75 /* doDelete.php */; };
 		F12C33291974E06900C48B75 /* doGetDetail.php in Resources */ = {isa = PBXBuildFile; fileRef = F12C33211974E06900C48B75 /* doGetDetail.php */; };
@@ -190,6 +195,7 @@
 			dstPath = /Users/JGO/Documents/Lancershost/quiz;
 			dstSubfolderSpec = 0;
 			files = (
+				F102140C1981EE7B0032BF13 /* doSetVideo.php in CopyFiles */,
 				F10213F3198105DE0032BF13 /* doSetImage4.php in CopyFiles */,
 				F10213F0198100EA0032BF13 /* doSetImage2.php in CopyFiles */,
 				F10213EB1980CC450032BF13 /* doSetImage1.php in CopyFiles */,
@@ -226,6 +232,11 @@
 		F10213FD19811EF30032BF13 /* topbar_expert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_expert@2x.png"; path = "Images/topbars/topbar_expert@2x.png"; sourceTree = "<group>"; };
 		F10213FF198121370032BF13 /* topbar_ImageUpload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topbar_ImageUpload@2x.png"; path = "Images/topbars/topbar_ImageUpload@2x.png"; sourceTree = "<group>"; };
 		F10214031981DB940032BF13 /* family.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = family.m4v; path = Images/family.m4v; sourceTree = "<group>"; };
+		F10214051981E26B0032BF13 /* zoo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = zoo.mp4; path = Images/zoo.mp4; sourceTree = "<group>"; };
+		F10214071981E97A0032BF13 /* VideoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoUploadViewController.h; path = ViewControllers/RemoteController/VideoUploadViewController.h; sourceTree = "<group>"; };
+		F10214081981E97A0032BF13 /* VideoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoUploadViewController.m; path = ViewControllers/RemoteController/VideoUploadViewController.m; sourceTree = "<group>"; };
+		F102140A1981ED180032BF13 /* doSetVideo.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doSetVideo.php; path = "Site Files/doSetVideo.php"; sourceTree = SOURCE_ROOT; };
+		F102140D198203BE0032BF13 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample.m4v; path = Images/sample.m4v; sourceTree = "<group>"; };
 		F12C33201974E06900C48B75 /* doDelete.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doDelete.php; path = "Site Files/doDelete.php"; sourceTree = SOURCE_ROOT; };
 		F12C33211974E06900C48B75 /* doGetDetail.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doGetDetail.php; path = "Site Files/doGetDetail.php"; sourceTree = SOURCE_ROOT; };
 		F12C33221974E06900C48B75 /* doInsert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = doInsert.php; path = "Site Files/doInsert.php"; sourceTree = SOURCE_ROOT; };
@@ -396,6 +407,8 @@
 		F12C333C197677E600C48B75 /* RemoteController */ = {
 			isa = PBXGroup;
 			children = (
+				F10214071981E97A0032BF13 /* VideoUploadViewController.h */,
+				F10214081981E97A0032BF13 /* VideoUploadViewController.m */,
 				F10213FA198112CA0032BF13 /* ImageUploadViewController.h */,
 				F10213FB198112CA0032BF13 /* ImageUploadViewController.m */,
 				F12C333D1976784D00C48B75 /* APIURL.h */,
@@ -432,6 +445,8 @@
 		F138A0AF19734E050022F7DE /* Images Files */ = {
 			isa = PBXGroup;
 			children = (
+				F102140D198203BE0032BF13 /* sample.m4v */,
+				F10214051981E26B0032BF13 /* zoo.mp4 */,
 				F10214031981DB940032BF13 /* family.m4v */,
 				F10213F8198111B00032BF13 /* town.jpg */,
 				F138A16419737F610022F7DE /* LaunchImage.png */,
@@ -665,6 +680,7 @@
 				F10213EE198100CD0032BF13 /* doSetImage2.php */,
 				F10213E71980CA340032BF13 /* doSetImage3.php */,
 				F10213F1198102000032BF13 /* doSetImage4.php */,
+				F102140A1981ED180032BF13 /* doSetVideo.php */,
 				F10213E3197E49E60032BF13 /* doViewImage.php */,
 				F12C33201974E06900C48B75 /* doDelete.php */,
 				F12C33211974E06900C48B75 /* doGetDetail.php */,
@@ -772,6 +788,7 @@
 				F138A112197366470022F7DE /* botan_3.png in Resources */,
 				F1985F701972231500277585 /* Main_iPad.storyboard in Resources */,
 				F10213E81980CA340032BF13 /* doSetImage1.php in Resources */,
+				F102140B1981ED180032BF13 /* doSetVideo.php in Resources */,
 				F12C332C1974E06900C48B75 /* doUpdate.php in Resources */,
 				F138A17719737FF30022F7DE /* pluslife-76.png in Resources */,
 				F138A158197373400022F7DE /* ichiran@2x.png in Resources */,
@@ -793,6 +810,7 @@
 				F138A17E19737FF30022F7DE /* pluslife-Small@2x.png in Resources */,
 				F138A129197369F20022F7DE /* ill_Info.txt in Resources */,
 				F138A0BD1973534A0022F7DE /* top_4.png in Resources */,
+				F10214061981E26B0032BF13 /* zoo.mp4 in Resources */,
 				F138A17A19737FF30022F7DE /* pluslife-Small-40@2x.png in Resources */,
 				F138A12B19736C630022F7DE /* botan_10.png in Resources */,
 				F138A17C19737FF30022F7DE /* pluslife-Small-50@2x.png in Resources */,
@@ -850,6 +868,7 @@
 				F138A0FA19735FA90022F7DE /* ashi.png in Resources */,
 				F138A17919737FF30022F7DE /* pluslife-Small-40.png in Resources */,
 				F138A0BA1973534A0022F7DE /* top_1.png in Resources */,
+				F102140E198203BE0032BF13 /* sample.m4v in Resources */,
 				F12C333B197624A100C48B75 /* Settings.bundle in Resources */,
 				F138A0BC1973534A0022F7DE /* top_3.png in Resources */,
 				F138A110197366470022F7DE /* botan_1.png in Resources */,
@@ -877,6 +896,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1985F6A1972231500277585 /* PLAppDelegate.m in Sources */,
+				F10214091981E97A0032BF13 /* VideoUploadViewController.m in Sources */,
 				F138A0E819735D510022F7DE /* TiryouTableViewController.m in Sources */,
 				F138A0DC19735C6D0022F7DE /* WLMyJournal.m in Sources */,
 				F138A0EB19735D9A0022F7DE /* KennsaKitViewController.m in Sources */,

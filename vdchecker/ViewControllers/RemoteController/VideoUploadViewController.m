@@ -1,16 +1,16 @@
 //
-//  ImageUploadViewController.m
+//  VideoUploadViewController.m
 //  vdchecker
 //
 //  Created by younghwan moon on 7/18/14.
 //  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
-#import "ImageUploadViewController.h"
+#import "VideoUploadViewController.h"
 #import "ConnectionViewController.h"
 #import "APIURL.h"
 
-@implementation ImageUploadViewController
+@implementation VideoUploadViewController
 
 // プロパティとメンバー変数の設定
 //@synthesize urlTextField = _urlTextField;
@@ -20,7 +20,7 @@
 @synthesize aImage;
 @synthesize recordID = _recordID;
 @synthesize connectionViewController = _connectionViewController;
-@synthesize deleteImageButton = _deleteImageButton;
+@synthesize deleteVideoButton = _deleteVideoButton;
 
 // イニシャライザ
 - (id)initWithNibName:(NSString *)nibNameOrNil 
@@ -107,60 +107,6 @@
 }
 
 // 「UpLoad Image」ボタンが押されたときの処理
-//- (IBAction)uploadImage:(id)sender
-//{
-//    // 入力されたURLとタイトルを取得する
-//    self.aImage = self.aImageView.image;
-//    
-//    // URLとタイトルが入力されていなければ何もしない
-//    if (self.aImage)
-//    {
-//        // 接続先のURLを作成する
-//        // ここで接続先は、情報編集機能と情報登録機能とで異なる
-//        NSString *recordID = self.recordID;
-//        NSURL *url = nil;
-//
-//        // 情報編集機能のURLを取得する
-//        url = [NSURL URLToDoUpdateImage];
-//        
-//        // 接続要求を作成する
-//        NSMutableURLRequest *req;
-//        req = [NSMutableURLRequest requestWithURL:url];
-//        
-//        // HTTPのメソッドをPOSTに設定する
-//        [req setHTTPMethod:@"POST"];
-//        
-//        // POSTで送信するデータを作成する
-//        NSMutableDictionary *dict;
-//        
-//        dict = [NSMutableDictionary dictionaryWithCapacity:0];
-//        [dict setObject:self.aImage forKey:@"img_col"];
-//
-//        if ([recordID length] > 0)
-//            [dict setObject:recordID forKey:@"ID"];
-//        
-//        NSData *data;
-//        data = [self formEncodedDataFromDictionary:dict];
-//        
-//        // POSTのデータとして設定する
-//        [req setHTTPBody:data];
-//        
-//        // 通信画面を表示して、通信を開始する
-//        ConnectionViewController *vc;
-//        vc = [[ConnectionViewController alloc] initWithNibName:nil
-//                                                        bundle:nil];
-//        [vc setUrlRequest:req];
-//        
-//        [self presentViewController:vc animated:NO completion:^{
-//
-//            // もし、通信画面が既に非表示になっていたら、通信を開始できなかった
-//            // ということなので、プロパティにセットしない
-//            [self setConnectionViewController:vc];
-//        }];
-//    }
-//}
-
-// 「UpLoad Image」ボタンが押されたときの処理
 // POSTで渡せるように、viewに格納されたファイルから
 // 「form」形式のデータを作成する
 //<form enctype="multipart/form-data" action="アクション" method="post">
@@ -168,18 +114,14 @@
 //<br />
 //<input type="submit" value="送信" />
 //</form>
-- (IBAction)uploadImage:(id)sender
+- (IBAction)uploadVideo:(id)sender
 {
-//    NSString *samplePath = [[NSBundle mainBundle] pathForResource:@"zoo" ofType:@"mp4"];
-    NSString *samplePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"m4v"];
+    NSString *samplePath = [[NSBundle mainBundle] pathForResource:@"zoo" ofType:@"mp4"];
     NSData *sampleData = [NSData dataWithContentsOfFile:samplePath];
 
     //送信先URL
-//    NSURL *url = [NSURL URLWithString:@"http://localhost:8888/uploadsample.php"]; //@"送信先URL"];
     // ここでの接続先は、情報を取得するAPIへのURL
-    NSURL *url = [NSURL URLToDoUpdateImage];
-    
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSURL *url = [NSURL URLToDoUpdateVideo];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
     [request setHTTPMethod:@"POST"];
     
@@ -212,8 +154,7 @@
     
     [request addValue:header forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postBody];
-    
-    //    [NSURLConnection connectionWithRequest:request delegate:self];
+
     // 通信画面を表示して、通信を開始する
     ConnectionViewController *vc;
     vc = [[ConnectionViewController alloc] initWithNibName:nil
@@ -227,33 +168,7 @@
         [self setConnectionViewController:vc];
     }];
 }
-/*
- NSMutableData *postbody = [NSMutableData data];
- 
- [postbody appendData:[[NSString stringWithFormat:@"--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
- [postbody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"userfile\"; filename=\"video.mp4\"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
- [postbody appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
- 
- NSString* outputPath = @"somePathToFile";
- NSData *data = [NSData dataWithContentsOfFile:outputPath];
- 
- [postbody appendData:data];
- [postbody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
- 
- // Adding one more field:
- // append boundary
- [postbody appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
- // setting up form-data header, if it is text no 'filename' needed
- [postbody appendData:[@"Content-Disposition: form-data; name=\"userId\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
- // appending userId value
- [postbody appendData:[_userId dataUsingEncoding:NSUTF8StringEncoding]];
- 
- // Ending boundary
- [postbody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
- [postbody appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
- 
- [request setHTTPBody:postbody];
-*/
+
 
 
 // 受信したデータから成功したかどうかを判定する

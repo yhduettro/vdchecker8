@@ -283,4 +283,41 @@ function insertNewImage($img_src)
     }
     return $ret;
 }
+    
+    
+function insertNewVideo($img_src)
+{
+    
+    $ret = false;
+    
+    If($img_src) {
+        
+        // DBに接続する
+        $db = connectToDB();
+        
+        $PSize = filesize($img_src);
+        $imgbinary = fread(fopen($img_src, "r"), $PSize); // バイナリデータを読み込み
+        $img_str = base64_encode($imgbinary); // base64エンコード
+        echo '<img src="data:video/mp4;base64,'.$img_str.'" />'; // imgタグで出力
+        
+        $mysqlPicture = addslashes($imgbinary);
+        
+        if ($db)
+        {
+            // DBに登録する
+            $q = "INSERT INTO ImgFileTable (img_col)" . " VALUES ('$mysqlPicture')";
+            $ret = mysql_query($q) or die("쿼리를 수행할 수 없습니다.");
+            
+            // 成功メッセージを表示する
+            echo "DBに登録しました。"; //(Debug Mode only)
+            // DBから切断する
+            mysql_close($db);
+        }
+    }
+    else
+    {
+        echo "어떤 그림도 업로드하지 않으셨습니다.";
+    }
+    return $ret;
+}
 ?>

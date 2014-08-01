@@ -1,5 +1,5 @@
 //
-//  ImageUploadViewController.h
+//  VideoUploadViewController.h
 //  vdchecker
 //
 //  Created by younghwan moon on 7/18/14.
@@ -11,7 +11,7 @@
 // 「ConnectionViewController」クラスが存在することを宣言
 @class ConnectionViewController;
 
-@interface ImageUploadViewController : UIViewController
+@interface VideoUploadViewController : UIViewController
 {
     // URLを入力するテキストフィールド
     UITextField *_urlTextField;
@@ -38,8 +38,8 @@
 @property (retain, nonatomic) NSString *recordID;
 @property (retain, nonatomic)
 ConnectionViewController *connectionViewController;
-@property (retain, nonatomic) IBOutlet UIButton *loadImageButton;
-@property (retain, nonatomic) IBOutlet UIButton *deleteImageButton;
+@property (retain, nonatomic) IBOutlet UIButton *loadVideButton;
+@property (retain, nonatomic) IBOutlet UIButton *deleteVideoButton;
 
 // 受信したデータから成功したかどうかを判定する
 - (BOOL)checkSuccessWithReceivedData;

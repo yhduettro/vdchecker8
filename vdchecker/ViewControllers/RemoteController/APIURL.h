@@ -10,5 +10,6 @@
 + (NSURL *)URLToGetDetail:(NSString *)recordID;
 
 + (NSURL *)URLToDoUpdateImage;
++ (NSURL *)URLToDoUpdateVideo;
 
 @end
